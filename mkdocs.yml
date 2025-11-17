@@ -1,0 +1,116 @@
+site_name: "Lyra/Echo"
+
+theme:
+  name: material
+
+plugins:
+  - search
+nav:
+  - Home: index.md
+
+  - Design Reference:
+      - Architecture: docs/architecture.md
+      - Components: docs/components.md
+      - Roadmap: docs/roadmap.md
+      - Orchestration: docs/orchestration.md
+      - Agents: docs/agents.md
+
+  - Governance:
+      - Governance Overview: docs/governance.md
+      - Risk Management: docs/risk-management.md
+      - Risk Simulator: docs/risk-simulator.md
+
+      - Administrative Policies:
+          - Model Lifecycle: docs/policies/model-lifecycle.md
+          - Prompt and Agent: docs/policies/prompt-and-agent.md
+          - Data Retention & Privacy: docs/policies/data-privacy.md
+          - Access Control: docs/policies/access-control.md
+          - Incident Response: docs/policies/incident-response.md
+          - Audit & Review: docs/policies/audit-review.md
+          - Change Management: docs/policies/change-management.md
+          - Ethical Use: docs/policies/ethical-use.md
+          - Power & Continuity: docs/policies/power-continuity.md
+          - Documentation & Publication: docs/policies/documentation.md
+
+      - AI Policies:
+          - AI Constitution: docs/policies/ai-policy/constitution.md
+          - Sensor & Perception: docs/policies/ai-policy/sensor-perception.md
+          - AI Autonomy & Action: docs/policies/ai-policy/autonomy-action.md
+          - Emotional Interaction & Psychological Safety: docs/policies/ai-policy/emotional-interaction.md
+          - Environmental Impact & Sustainability: docs/policies/ai-policy/environmental-impact.md
+          - Training Data Ethics & Provenance: docs/policies/ai-policy/trainingdata-ethics.md
+          - Autonomous Learning & Adaptation: docs/policies/ai-policy/autonomous-learning.md
+
+      - Governance References: docs/gov-ref.md
+
+  - Operations:
+      - Runbooks: docs/ops/runbooks.md
+      - Maintenance: docs/ops/maintenance.md
+      - Monitoring: docs/ops/monitoring.md
+
+  - Development:
+      - Environment Setup: docs/dev/setup.md
+      - LLM Setup: docs/dev/llm-setup.md
+      - API Reference: docs/dev/api.md
+      - Models: docs/dev/models.md
+      - Testing: docs/dev/testing.md
+
+  - Integration:
+      - Home Assistant: docs/integration/home-assistant.md
+      - MQTT Topics: docs/integration/mqtt-topics.md
+      - Vector Database: docs/integration/vector-db.md
+      - Security Onion: docs/integration/security-onion.md
+
+  - Security:
+      - Threat Model: docs/security/threat-model.md
+      - Hardening Guide: docs/security/hardening.md
+      - Assessment Checklist: docs/security/assessments.md
+
+  - Architecture Annex:
+      - Diagrams: docs/architecture/diagrams.md
+      - Network: docs/architecture/network.md
+
+  - UI:
+      - Mirror Interface: docs/ui/mirror-interface.md
+      - Voice Interaction: docs/ui/voice-interaction.md
+      - Personalization: docs/ui/personalization.md
+
+  - Release:
+      - Change Log: docs/release/changelog.md
+      - Versioning: docs/release/versioning.md
+
+  - Appendices:
+      - Reference Material: docs/appendices/reference.md
+      - Glossary: docs/appendices/reference-appendix.md
+
+  - Entries:
+      - Template (2025-11-10): entries/2025-11-10-template.md
+
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - styles/mc.css
+  - styles/compact.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - js/mermaid-init.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
+  - js/mc-sim.js

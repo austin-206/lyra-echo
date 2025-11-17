@@ -1,0 +1,31 @@
+
+/* Reduce paragraph spacing */
+.md-typeset p {
+  margin-bottom: 0.4rem;   /* default is ~1rem */
+}
+
+/* Reduce spacing between list items */
+.md-typeset li {
+  margin-bottom: 0.25rem;
+}
+
+/* Reduce spacing before section headers */
+.md-typeset h3 {
+  margin-top: 1.0rem;     /* default is 1.6rem */
+  margin-bottom: 0.4rem;
+}
+
+/* Reduce spacing after headers generally */
+.md-typeset h2, .md-typeset h4, .md-typeset h5 {
+  margin-bottom: 0.5rem;
+}
+
+/* Tighten line-height slightly */
+.md-typeset {
+  line-height: 1.35;      /* default ~1.6 */
+}
+
+/* Optional: tighten code blocks too */
+.md-typeset code, .md-typeset pre {
+  line-height: 1.3;
+}
