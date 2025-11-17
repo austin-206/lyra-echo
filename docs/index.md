@@ -12,7 +12,7 @@ status: evolving
 # Lyra/Echo
 
 Lyra/Echo is a local-first, policy-governed AI platform designed to operate inside the home without cloud dependence.  
-It is not a monolithic model or a consumer assistant clone—it is a full AI architecture combining language models, sensors, memory, orchestration, and strict governance controls.
+It is a full AI architecture combining language models, sensors, memory, orchestration, and strict governance controls.
 
 This site documents the design, governance, and implementation path of the system as it evolves from blueprint to prototype to operational environment.
 
@@ -37,7 +37,7 @@ The goal is a system that delivers useful functionality while keeping all data a
 
 Lyra Echo consists of two primary components:
 
-### **Lyra — The Core AI Host**
+### **Lyra: The Core AI Host**
 A GPU workstation responsible for:
 
 - local LLM inference  
@@ -46,7 +46,7 @@ A GPU workstation responsible for:
 - vector memory (Qdrant)  
 - safety and governance enforcement  
 
-### **Echo — The Mirror Node**
+### **Echo: The Mirror Node**
 A Raspberry Pi based interface that manages:
 
 - real-time voice interaction  
