@@ -53,7 +53,7 @@ cd ~/vega-stack
 nano docker-compose.yml
 ```
 
-Paste this minimal stack (adjust volumes/paths as needed):
+Use this stack (adjust path as needed):
 ```yaml
 version: "3.8"
 services:
@@ -178,18 +178,6 @@ GRAFANA_URL=http://localhost:3000
 HOME_ASSISTANT_URL=http://localhost:8123
 ```
 
-Never commit real credentials — keep a sanitized `.env.example` for reference.
-
----
-
-## Documentation (optional)
-If you want local docs preview during edits:
-```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install mkdocs mkdocs-material pymdown-extensions
-mkdocs serve -a 0.0.0.0:8000
-```
-
 ---
 
 ## Notes
@@ -201,4 +189,4 @@ Each layer runs independently but communicates via MQTT and REST APIs on the loc
 
 ---
 
-_Last updated: 2025-11-10_
+_Last updated: 2025-11-16_
