@@ -2,7 +2,7 @@
 
 ## Purpose
 Describe how to prepare, maintain, and safely extend the Lyra Echo environment across its core nodes.  
-This is not a traditional code repository setup guide — it defines how the system’s infrastructure, orchestration, and supporting services are configured for local development, testing, and updates.
+This is not a traditional code repository setup guide; it defines how the system’s infrastructure, orchestration, and supporting services are configured for local development, testing, and updates.
 
 ---
 
@@ -18,8 +18,8 @@ Lyra Echo runs as a distributed local ecosystem:
 ---
 
 ## Environment Objectives
-- Ensure consistent configuration across Lyra, Vega, and mirror nodes.  
-- Maintain isolated Python environments where needed (e.g., local tools).  
+- Provide consistent configuration across Lyra, Vega, and mirror nodes.  
+- Maintain isolated Python environments where needed.  
 - Preserve security by using `.env` secrets and local network segmentation.  
 - Enable reliable, restart-safe services via containers or systemd units.
 
