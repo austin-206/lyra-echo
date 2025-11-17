@@ -1457,15 +1457,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentation (optional)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
@@ -2426,15 +2417,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentation (optional)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
@@ -2546,7 +2528,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">en
 <span class="nb">cd</span><span class="w"> </span>~/vega-stack
 nano<span class="w"> </span>docker-compose.yml
 </code></pre></div></p>
-<p>Paste this minimal stack (adjust volumes/paths as needed):
+<p>Use this stack (adjust path as needed):
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mosquitto</span><span class="p">:</span>
@@ -2654,14 +2636,6 @@ ECHO_API_KEY=
 GRAFANA_URL=http://localhost:3000
 HOME_ASSISTANT_URL=http://localhost:8123
 </code></pre></div></p>
-<p>Never commit real credentials — keep a sanitized <code>.env.example</code> for reference.</p>
-<hr />
-<h2 id="documentation-optional">Documentation (optional)<a class="headerlink" href="#documentation-optional" title="Permanent link">&para;</a></h2>
-<p>If you want local docs preview during edits:
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
-pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material<span class="w"> </span>pymdown-extensions
-mkdocs<span class="w"> </span>serve<span class="w"> </span>-a<span class="w"> </span><span class="m">0</span>.0.0.0:8000
-</code></pre></div></p>
 <hr />
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2671,7 +2645,7 @@ mkdocs<span class="w"> </span>serve<span class="w"> </span>-a<span class="w"> </
 </ul>
 <p>Each layer runs independently but communicates via MQTT and REST APIs on the local network.</p>
 <hr />
-<p><em>Last updated: 2025-11-10</em></p>
+<p><em>Last updated: 2025-11-16</em></p>
 
 
 
