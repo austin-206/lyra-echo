@@ -1,4 +1,5 @@
 site_name: "Lyra/Echo"
+site_url: https://austin-206.github.io/lyra-echo/
 
 theme:
   name: material
@@ -85,7 +86,7 @@ nav:
 
   - Entries:
       - Template (2025-11-10): entries/2025-11-10-template.md
-
+      - Open-WebUI, vLLM, and Household Memory (2025-11-20): entries/2025-11-20.md
 
 markdown_extensions:
   - admonition
