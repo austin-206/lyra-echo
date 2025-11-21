@@ -2,210 +2,214 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://austin-206.github.io/lyra-echo/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/agents/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/architecture/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/components/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/gov-ref/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/governance/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/orchestration/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/risk-management/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/risk-simulator/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/roadmap/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/appendices/reference-appendix/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/appendices/reference/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/architecture/diagrams/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/architecture/network/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/dev/api/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/dev/llm-setup/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/dev/models/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/dev/setup/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/dev/testing/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/integration/home-assistant/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/integration/mqtt-topics/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/integration/security-onion/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/integration/vector-db/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ops/maintenance/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ops/monitoring/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ops/runbooks/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/access-control/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/audit-review/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/change-management/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/data-privacy/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/documentation/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ethical-use/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/incident-response/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/model-lifecycle/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/power-continuity/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/prompt-and-agent/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/autonomous-learning/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/autonomy-action/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/constitution/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/emotional-interaction/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/environmental-impact/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/sensor-perception/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/trainingdata-ethics/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/release/changelog/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/release/versioning/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/security/assessments/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/security/hardening/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/security/threat-model/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ui/mirror-interface/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ui/personalization/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ui/voice-interaction/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://austin-206.github.io/lyra-echo/entries/2025-11-10-template/</loc>
-         <lastmod>2025-11-17</lastmod>
+         <lastmod>2025-11-21</lastmod>
+    </url>
+    <url>
+         <loc>https://austin-206.github.io/lyra-echo/entries/2025-11-20/</loc>
+         <lastmod>2025-11-21</lastmod>
     </url>
 </urlset>

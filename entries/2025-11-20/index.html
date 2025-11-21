@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://austin-206.github.io/lyra-echo/entries/2025-11-10-template/">
+        <link rel="canonical" href="https://austin-206.github.io/lyra-echo/entries/2025-11-20/">
       
       
-        <link rel="prev" href="../../docs/appendices/reference-appendix/">
+        <link rel="prev" href="../2025-11-10-template/">
       
-      
-        <link rel="next" href="../2025-11-20/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Template (2025-11-10) - Lyra/Echo</title>
+        <title>Lyra Progress — WebUI, vLLM, and Household Memory - Lyra/Echo</title>
       
     
     
@@ -68,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2025-11-10-entry-template" class="md-skip">
+        <a href="#20-november-2025-lyra-web-interface-memory-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Template (2025-11-10)
+              Lyra Progress — WebUI, vLLM, and Household Memory
             
           </span>
         </div>
@@ -2091,6 +2089,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-10-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template (2025-11-10)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2108,7 +2129,7 @@
   
   
   <span class="md-ellipsis">
-    Template (2025-11-10)
+    Open-WebUI, vLLM, and Household Memory (2025-11-20)
     
   </span>
   
@@ -2121,7 +2142,7 @@
   
   
   <span class="md-ellipsis">
-    Template (2025-11-10)
+    Open-WebUI, vLLM, and Household Memory (2025-11-20)
     
   </span>
   
@@ -2159,6 +2180,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-web-interface-gateway-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Web Interface &amp; Gateway Routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-persona-wrapper-logical-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Persona Wrapper &amp; Logical Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-household-memory-ingestion-qdrant" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Household Memory Ingestion (Qdrant)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ingestion-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ingestion Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-modelruntime-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Model/Runtime Topology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2167,6 +2239,30 @@
       Observations
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Observations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#behavior-changes-after-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior Changes After Retrieval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-gpu-utilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance &amp; GPU Utilization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2183,29 +2279,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2025-11-20/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Open-WebUI, vLLM, and Household Memory (2025-11-20)
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2260,6 +2333,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-web-interface-gateway-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Web Interface &amp; Gateway Routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-persona-wrapper-logical-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Persona Wrapper &amp; Logical Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-household-memory-ingestion-qdrant" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Household Memory Ingestion (Qdrant)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ingestion-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ingestion Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-modelruntime-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Model/Runtime Topology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2268,6 +2392,30 @@
       Observations
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Observations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#behavior-changes-after-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior Changes After Retrieval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-gpu-utilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance &amp; GPU Utilization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2296,21 +2444,214 @@
 
 
 
-<h1 id="2025-11-10-entry-template">2025-11-10 Entry Template<a class="headerlink" href="#2025-11-10-entry-template" title="Permanent link">&para;</a></h1>
+<h1 id="20-november-2025-lyra-web-interface-memory-integration">20 November, 2025 — Lyra Web Interface &amp; Memory Integration<a class="headerlink" href="#20-november-2025-lyra-web-interface-memory-integration" title="Permanent link">&para;</a></h1>
 <h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
-<p>Task or experiment.</p>
+<p>This session focused on giving Lyra a functional interim web interface and establishing persistent, structured memory accessible during inference. The primary motivation was to stabilize Lyra’s interaction surface while constructing a foundation for long term memory using Qdrant. The eventual intention is that her responses reflect real, household specific knowledge rather than model guesswork. The work revolved around integrating Open-WebUI, correcting gateway routing, and building a cohesive RAG pipeline grounded in a YAML-defined world model.</p>
+<p>Today we achieved routing Open-WebUI through the vLLM gateway. This is a temporary gui for testing interaction while the final web interface for the mirror is developed. 
+I wired in the first attempt at household memory via Qdrant, using <code>house_profile.yaml</code> as seed knowledge. The yaml is ingested and the difference is vectorized and added to the database. 
+This results in the chain: browser → Open-WebUI → vLLM → Lyra persona wrapper → Qdrant retrieval → answer</p>
+<p>The main goal wasn't fast retrieval for fast retrieval's sake, it was to get a stable, explainable path from a question over the LAN to a grounded answer that knows its host hardware and details of the household in which it operates. Fast retrieval is an added bonus, as this is just one component of a communications stack that is intended to have a conversational response time.</p>
+<hr />
 <h2 id="work">Work<a class="headerlink" href="#work" title="Permanent link">&para;</a></h2>
-<p>Steps/config/tests.</p>
+<h3 id="1-web-interface-gateway-routing">1. Web Interface &amp; Gateway Routing<a class="headerlink" href="#1-web-interface-gateway-routing" title="Permanent link">&para;</a></h3>
+<p>We started by making sure Open-WebUI talks to vLLM instead of the default backend.</p>
+<p>Key checks:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># See which vLLM containers are actually running</span>
+docker<span class="w"> </span>ps<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>vllm
+
+<span class="c1"># Example expected container</span>
+<span class="c1"># vllm-qwen7b   vllm/vllm-openai:latest   &quot;python3 -m vllm.entrypoints.openai.api_server ...&quot;   0.0.0.0:8001-&gt;8000/tcp</span>
+</code></pre></div>
+<p>Then we validated Open-WebUI’s configuration so that:</p>
+<ul>
+<li><code>OPENAI_API_BASE</code> points at the vLLM endpoint (<code>http://lyra:8001/v1</code>).</li>
+<li><code>OPENAI_API_KEY</code> is set to a local dummy token, since vLLM doesn’t care what the key actually is.</li>
+<li>The model name in WebUI (today we are running qwen2.5-7b-instruct) matches what vLLM advertises.</li>
+</ul>
+<p>docker-compose.yml snippet for vLLM:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">vllm-qwen7b</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vllm/vllm-openai:latest</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;python3&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-m&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;vllm.entrypoints.openai.api_server&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--model&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Qwen/Qwen2.5-7B-Instruct&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--host&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;0.0.0.0&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--port&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--dtype&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;bfloat16&quot;</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8001:8000&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">NVIDIA_VISIBLE_DEVICES</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/mnt/data1/models:/models</span>
+<span class="w">    </span><span class="nt">runtime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nvidia</span>
+</code></pre></div>
+<p>A quick curl test confirmed the gateway was alive:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://lyra:8001/v1/models<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</code></pre></div>
+<p>This returned a JSON list where <code>id</code> corresponds to the Qwen 7B model. When that showed up, we knew Open-WebUI had the model.</p>
+<hr />
+<h3 id="2-persona-wrapper-logical-flow">2. Persona Wrapper &amp; Logical Flow<a class="headerlink" href="#2-persona-wrapper-logical-flow" title="Permanent link">&para;</a></h3>
+<p>On top of the raw vLLM endpoint, Lyra uses a small Python persona wrapper that accepts endpoint requests and injects Lyra’s system prompt and identity. It calls into Qdrant to retrieve household context and streams the final answer back using Chat Completions API format.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qdrant_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">QdrantClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">main</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_lyra_system_prompt</span><span class="p">,</span> <span class="n">retrieve_household_context</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">llm_client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;http://lyra:8001/v1&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;not-used&quot;</span><span class="p">)</span>
+<span class="n">qdrant</span> <span class="o">=</span> <span class="n">QdrantClient</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;lyra&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6333</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/v1/chat/completions&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">chat_completions</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="n">user_message</span> <span class="o">=</span> <span class="n">request</span><span class="p">[</span><span class="s2">&quot;messages&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;content&quot;</span><span class="p">]</span>
+    <span class="n">retrieval</span> <span class="o">=</span> <span class="n">retrieve_household_context</span><span class="p">(</span><span class="n">user_message</span><span class="p">,</span> <span class="n">qdrant</span><span class="o">=</span><span class="n">qdrant</span><span class="p">)</span>
+
+    <span class="n">system_prompt</span> <span class="o">=</span> <span class="n">build_lyra_system_prompt</span><span class="p">(</span><span class="n">extra_context</span><span class="o">=</span><span class="n">retrieval</span><span class="p">)</span>
+
+    <span class="n">completion</span> <span class="o">=</span> <span class="n">llm_client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;qwen2.5-7b-instruct&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">system_prompt</span><span class="p">},</span>
+            <span class="o">*</span><span class="n">request</span><span class="p">[</span><span class="s2">&quot;messages&quot;</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="n">stream</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;stream&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">completion</span>
+</code></pre></div>
+<p>The logic here allows for Lyra to always be framed with a stable system prompt (persona, safety constraints, memory policy). Retrieval is additive knowledge, not a full script of what to say.
+The user’s original message is kept intact, so the model sees both what the human asked and what Lyra already knows about them.</p>
+<hr />
+<h3 id="3-household-memory-ingestion-qdrant">3. Household Memory Ingestion (Qdrant)<a class="headerlink" href="#3-household-memory-ingestion-qdrant" title="Permanent link">&para;</a></h3>
+<p>I then wired in a first-pass ingestion pipeline from <code>house_profile.yaml</code> to Qdrant. The YAML describes things like residents and their roles in the household, hardware layout (Lyra GPU box, mirror, Pi nodes), and network basics and “what lives where” in each room.</p>
+<p>Ingestion script:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qdrant_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">QdrantClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qdrant_client.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PointStruct</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sentence_transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">SentenceTransformer</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">uuid</span>
+
+<span class="n">qdrant</span> <span class="o">=</span> <span class="n">QdrantClient</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;lyra&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6333</span><span class="p">)</span>
+<span class="n">embedder</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;house_profile.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">chunks</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">section_name</span><span class="p">,</span> <span class="n">section_data</span> <span class="ow">in</span> <span class="n">profile</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">section_data</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">chunks</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span>
+        <span class="s2">&quot;payload&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;section&quot;</span><span class="p">:</span> <span class="n">section_name</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">text</span><span class="p">},</span>
+        <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">text</span><span class="p">,</span>
+    <span class="p">})</span>
+
+<span class="n">vectors</span> <span class="o">=</span> <span class="n">embedder</span><span class="o">.</span><span class="n">encode</span><span class="p">([</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">])</span>
+
+<span class="n">points</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">PointStruct</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">payload</span><span class="o">=</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;payload&quot;</span><span class="p">],</span>
+        <span class="n">vector</span><span class="o">=</span><span class="n">v</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="n">vectors</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">qdrant</span><span class="o">.</span><span class="n">recreate_collection</span><span class="p">(</span>
+    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;house_docs&quot;</span><span class="p">,</span>
+    <span class="n">vectors_config</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">vectors</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s2">&quot;distance&quot;</span><span class="p">:</span> <span class="s2">&quot;Cosine&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">qdrant</span><span class="o">.</span><span class="n">upsert</span><span class="p">(</span><span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;house_docs&quot;</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ingested </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">points</span><span class="p">)</span><span class="si">}</span><span class="s2"> household memory chunks.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Retrieval helper in <code>main.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">retrieve_household_context</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">qdrant</span><span class="p">:</span> <span class="n">QdrantClient</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">embedding</span> <span class="o">=</span> <span class="n">embedder</span><span class="o">.</span><span class="n">encode</span><span class="p">([</span><span class="n">query</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="n">hits</span> <span class="o">=</span> <span class="n">qdrant</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+        <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;house_docs&quot;</span><span class="p">,</span>
+        <span class="n">vector</span><span class="o">=</span><span class="n">embedding</span><span class="p">,</span>
+        <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span>
+        <span class="n">with_payload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">hits</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="n">snippets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">hit</span> <span class="ow">in</span> <span class="n">hits</span><span class="p">:</span>
+        <span class="n">section</span> <span class="o">=</span> <span class="n">hit</span><span class="o">.</span><span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;section&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">hit</span><span class="o">.</span><span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">snippets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">section</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">snippets</span><span class="p">)</span>
+</code></pre></div>
+<p>I was able to validate ingestion with a scroll:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://127.0.0.1:6333/collections/house_docs/points/scroll&quot;</span><span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">   </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;limit&quot;: 3}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</code></pre></div>
+<p>Seeing <code>section</code> and <code>text</code> payloads confirmed that household memory exists as structured, searchable data rather than vibes. The Qdrant web gui reflected the new objects.</p>
+<hr />
+<h3 id="4-ingestion-workflow">4. Ingestion Workflow<a class="headerlink" href="#4-ingestion-workflow" title="Permanent link">&para;</a></h3>
+<p><code>house_profile.yaml</code> is ingested by <code>ingest_house_profile.py</code>. That script generates embeddings using FastEmbed. Embeddings and metadata are stored in the <code>house_docs</code> collection in Qdrant.
+At query time, Lyra takes the user’s message, calls <code>retrieve_household_context()</code> against Qdrant, pulls top-k similar memories, and wraps those into the persona prompt.</p>
+<hr />
+<h3 id="5-modelruntime-topology">5. Model/Runtime Topology<a class="headerlink" href="#5-modelruntime-topology" title="Permanent link">&para;</a></h3>
+<p>Open-WebUI runs as the temporary chat front-end. A gateway service exposes a local “OpenAI-style” API. vLLM runs as the main inference engine. Qdrant holds long-term household memory (<code>house_docs</code>, etc.).</p>
+<p>Requests flow from browser → Open-WebUI → Gateway → vLLM + Qdrant → Response back to browser.</p>
+<hr />
 <h2 id="observations">Observations<a class="headerlink" href="#observations" title="Permanent link">&para;</a></h2>
-<p>Results/metrics/unexpected behavior.</p>
+<h3 id="behavior-changes-after-retrieval">Behavior Changes After Retrieval<a class="headerlink" href="#behavior-changes-after-retrieval" title="Permanent link">&para;</a></h3>
+<p>Before Qdrant was wired in, Lyra could talk about “your GPU” in generic terms, but it had no grounded knowledge of the actual build. After ingestion, when asked “Tell me about your hardware in detail”, the answer referenced the Ryzen CPU, RTX 5090 GPU, and the storage layout. The tone shifted from speculative to descriptive. It no longer guessed model numbers based on the question, it recalled them from database memory.
+Qualitatively, this results in less hallucinated detail and more continuity between sessions: the same residents, the same hardware, the same roles.</p>
+<h3 id="performance-gpu-utilization">Performance &amp; GPU Utilization<a class="headerlink" href="#performance-gpu-utilization" title="Permanent link">&para;</a></h3>
+<p>Qwen 7B under vLLM on the 5090 is extremely fast for single-user, LAN-bound chat. Token generation felt instant enough for interactive use. vLLM’s paged attention meant the context window could be large without choking VRAM. GPU memory is the limiting factor for larger models, but not for running 7B at high throughput.
+The important discovery: 7B as my intended lighter weight model does not feel like a sad fallback; with retrieval and a strong persona wrapper, it behaves like a much larger system because it’s anchored in real data.</p>
+<hr />
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>Follow-ups to verify.</p>
+<ol>
+<li>
+<p><strong>Memory Expansion Beyond <code>house_profile.yaml</code></strong><br />
+   Add more project documents (governance policies, risk sim notes, Echo build logs) into additional Qdrant collections. Tell Lyra what PSU she has again because that edit got overwritten while I was refining the ingestion script. 
+   Add more metadata fields (doc_type, created_at, sensitivity) for smarter retrieval and future governance rules.</p>
+</li>
+<li>
+<p><strong>Persona Refinement &amp; Safety Rails</strong><br />
+   Add more of the AI Constitution and memory ethics into <code>build_lyra_system_prompt()</code>.
+   Separate “factual household context” from “emotional/supportive tone” so Lyra can be both warm and precise.</p>
+</li>
+<li>
+<p><strong>Monitoring &amp; Telemetry</strong><br />
+   Add basic metrics for Qdrant search latency, vLLM token throughput per request, and GPU VRAM utilization over time.
+   Store these in Prometheus/Grafana so I can correlate “Lyra feels slow today” with actual resource graphs.</p>
+</li>
+<li>
+<p><strong>Prepare for Mirror Integration</strong><br />
+  Define a small, stable HTTP API that the Magic Mirror front-end can hit for chat completions, and integrate it into the web interface design.
+  Quick status pings (is vLLM up, is Qdrant up). 
+  Echo's physical build is coming along.. consistently. Two more mortises to cut for the bottom panel of the shadowbox, final touches on the paint, and I can start wiring in the components. </p>
+</li>
+<li>
+<p><strong>VRAM &amp; Second Node Planning</strong><br />
+  Treat the 5090 + 7B vLLM stack as the inference workhorse for now while planning the text to speech layer. 14b is a likely next step if it's possible for it to play well with speech.
+  Begin designing a second node focused on TTS/STT and possibly larger quantized experimentation models, keeping this journal entry as the baseline of what currently works well. I'm not convinced that a 14b model and Parler TTS will work together to produce my intended results but quant schema and context length variables might prove me wrong. </p>
+</li>
+</ol>
+<p>This week is when Lyra stopped being just a fast toy model and gained context, temporal persistence, and the accompanied early programmatic governance. The retrieval gateway and storage layers will now be the basis for additional deveopment and theory.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
