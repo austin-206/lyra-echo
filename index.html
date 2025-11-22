@@ -2181,12 +2181,11 @@
 
 
 <h1 id="lyraecho">Lyra/Echo<a class="headerlink" href="#lyraecho" title="Permanent link">&para;</a></h1>
-<p>Lyra/Echo is a local-first, policy-governed AI platform designed to operate inside the home without cloud dependence.<br />
-It is a full AI architecture combining language models, sensors, memory, orchestration, and strict governance controls.</p>
-<p>This site documents the design, governance, and implementation path of the system as it evolves from blueprint to prototype to operational environment.</p>
+<p>Lyra/Echo is an AI platform designed to operate inside the home without cloud dependence. It is a full AI architecture combining language models with a strict control layer, persistent memory, sensors, and orchestration.</p>
+<p>This site documents the design and implementation path of the system as it evolves from blueprint to operational environment.</p>
 <hr />
 <h1 id="project-intent">Project Intent<a class="headerlink" href="#project-intent" title="Permanent link">&para;</a></h1>
-<p>Lyra Echo explores a future where AI in the home is:</p>
+<p>Lyra/Echo explores a future where AI in the home is:</p>
 <ul>
 <li><strong>private</strong> (all inference and storage occur locally)</li>
 <li><strong>embedded</strong> (aware of physical context through sensors)</li>
@@ -2198,14 +2197,14 @@ It is a full AI architecture combining language models, sensors, memory, orchest
 <p>The goal is a system that delivers useful functionality while keeping all data and computation local to the home environment.</p>
 <hr />
 <h1 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h1>
-<p>Lyra Echo consists of two primary components:</p>
+<p>Lyra/Echo consists of two primary components:</p>
 <h3 id="lyra-the-core-ai-host"><strong>Lyra: The Core AI Host</strong><a class="headerlink" href="#lyra-the-core-ai-host" title="Permanent link">&para;</a></h3>
 <p>A GPU workstation responsible for:</p>
 <ul>
 <li>local LLM inference  </li>
 <li>STT ↔ LLM ↔ TTS pipelines  </li>
 <li>orchestration and agent logic  </li>
-<li>vector memory (Qdrant)  </li>
+<li>vector memory (Qdrant database)  </li>
 <li>safety and governance enforcement  </li>
 </ul>
 <h3 id="echo-the-mirror-node"><strong>Echo: The Mirror Node</strong><a class="headerlink" href="#echo-the-mirror-node" title="Permanent link">&para;</a></h3>
@@ -2217,19 +2216,11 @@ It is a full AI architecture combining language models, sensors, memory, orchest
 <li>environment cues for context  </li>
 <li>privacy-aware sensor processing  </li>
 </ul>
-<p>The two systems communicate through MQTT, REST, and structured event channels, with strict access-control rules defined in policy.</p>
+<p>The two systems communicate through MQTT, REST, and structured event channels with strict access-control rules.</p>
 <hr />
 <h1 id="governance-centered-design">Governance-Centered Design<a class="headerlink" href="#governance-centered-design" title="Permanent link">&para;</a></h1>
-<p>Lyra Echo is built with governance at the foundation rather than tacked on afterward.<br />
-The system incorporates:</p>
-<ul>
-<li>an AI Constitution defining non-negotiable behavioral boundaries  </li>
-<li>policies for memory ethics, sensor use, data retention, and autonomy </li>
-<li>model-provenance and training-data requirements  </li>
-<li>energy-impact constraints  </li>
-<li>a full incident response framework for model misbehavior  </li>
-<li>drift, bias, and hallucination audits</li>
-</ul>
+<p>Lyra/Echo is built with governance at the foundation. The system incorporates an AI Constitution defining non-negotiable behavioral boundaries and policies for memory ethics, sensor use, data retention, and autonomy. 
+Policy topics cover model-provenance and training-data requirements, energy-impact constraints, a full incident response framework for model misbehavior, and audits for drift, bias, and hallucination.</p>
 <hr />
 <h1 id="system-components">System Components<a class="headerlink" href="#system-components" title="Permanent link">&para;</a></h1>
 <table>
@@ -2274,44 +2265,16 @@ The system incorporates:</p>
 </tbody>
 </table>
 <hr />
-<h1 id="current-status-2025-11">Current Status (2025-11)<a class="headerlink" href="#current-status-2025-11" title="Permanent link">&para;</a></h1>
-<p>Lyra Echo is in the architecture + early implementation phase.</p>
-<h3 id="physical-build"><strong>Physical Build</strong><a class="headerlink" href="#physical-build" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Fabrication of physical mirror interface underway  </li>
-<li>Mirror UI design prepared - data dashboards and conversational UI </li>
-<li>Presence sensing tested and validated  </li>
-<li>Facial regcognition models built and functional</li>
-</ul>
-<h3 id="software-stack"><strong>Software Stack</strong><a class="headerlink" href="#software-stack" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Governance framework established  </li>
-<li>Administrative + AI policies authored  </li>
-<li>Architecture diagrams and system design documented  </li>
-<li>LLM host stable with multiple models available  </li>
-<li>STT/TTS exploration ongoing (ReSpeaker + XTTS/Parler)  </li>
-<li>Orchestration layer in planning and prototype stages  </li>
-<li>Vector memory schema established</li>
-</ul>
-<h3 id="not-yet-implemented"><strong>Not Yet Implemented</strong><a class="headerlink" href="#not-yet-implemented" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Full STT ↔ LLM ↔ TTS loop  </li>
-<li>Memory TTL enforcement  </li>
-<li>Drift/hallucination audit automation  </li>
-<li>Safety-gated tool execution  </li>
-<li>Complete mirror UI integration  </li>
-</ul>
-<p>This documentation will grow and update as implementation progresses from prototype → integration → operational deployment.</p>
-<hr />
 <h1 id="how-to-read-this-documentation">How to Read This Documentation<a class="headerlink" href="#how-to-read-this-documentation" title="Permanent link">&para;</a></h1>
 <ul>
 <li><strong>Design Reference</strong> describes the system’s architecture and long-term roadmap  </li>
-<li><strong>Governance</strong> contains the full policy suite and safety framework  </li>
+<li><strong>Governance</strong> contains the full policy suite, safety framework, and a risk management program geared toward the use of generative intelligence</li>
 <li><strong>Operations</strong> covers procedures, runbooks, and monitoring  </li>
-<li><strong>Development</strong> documents model setup and code architecture  </li>
-<li><strong>Integration</strong> outlines Home Assistant, MQTT, and vector DB flows  </li>
+<li><strong>Development</strong> Model setup and code architecture  </li>
+<li><strong>Integration</strong> Home Assistant, MQTT, and vector DB flows  </li>
+<li><strong>Current Status</strong> Progress journal</li>
 </ul>
-<p>Lyra/Echo is meant to be an adoptable and extensible reference model for private, governed, embedded AI.</p>
+<p>Lyra/Echo is meant to be an adoptable and extensible reference model for private and embedded AI.</p>
 <hr />
 <p>Last updated: <em>{{ git_revision_date_localized }}</em>  </p>
 
