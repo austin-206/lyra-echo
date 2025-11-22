@@ -11,16 +11,15 @@ status: evolving
 
 # Lyra/Echo
 
-Lyra/Echo is a local-first, policy-governed AI platform designed to operate inside the home without cloud dependence.  
-It is a full AI architecture combining language models, sensors, memory, orchestration, and strict governance controls.
+Lyra/Echo is an AI platform designed to operate inside the home without cloud dependence. It is a full AI architecture combining language models with a strict control layer, persistent memory, sensors, and orchestration.
 
-This site documents the design, governance, and implementation path of the system as it evolves from blueprint to prototype to operational environment.
+This site documents the design and implementation path of the system as it evolves from blueprint to operational environment.
 
 ---
 
 # Project Intent
 
-Lyra Echo explores a future where AI in the home is:
+Lyra/Echo explores a future where AI in the home is:
 
 - **private** (all inference and storage occur locally)
 - **embedded** (aware of physical context through sensors)
@@ -35,7 +34,7 @@ The goal is a system that delivers useful functionality while keeping all data a
 
 # Architecture Overview
 
-Lyra Echo consists of two primary components:
+Lyra/Echo consists of two primary components:
 
 ### **Lyra: The Core AI Host**
 A GPU workstation responsible for:
@@ -43,7 +42,7 @@ A GPU workstation responsible for:
 - local LLM inference  
 - STT ↔ LLM ↔ TTS pipelines  
 - orchestration and agent logic  
-- vector memory (Qdrant)  
+- vector memory (Qdrant database)  
 - safety and governance enforcement  
 
 ### **Echo: The Mirror Node**
@@ -55,21 +54,14 @@ A Raspberry Pi based interface that manages:
 - environment cues for context  
 - privacy-aware sensor processing  
 
-The two systems communicate through MQTT, REST, and structured event channels, with strict access-control rules defined in policy.
+The two systems communicate through MQTT, REST, and structured event channels with strict access-control rules.
 
 ---
 
 # Governance-Centered Design
 
-Lyra Echo is built with governance at the foundation rather than tacked on afterward.  
-The system incorporates:
-
-- an AI Constitution defining non-negotiable behavioral boundaries  
-- policies for memory ethics, sensor use, data retention, and autonomy 
-- model-provenance and training-data requirements  
-- energy-impact constraints  
-- a full incident response framework for model misbehavior  
-- drift, bias, and hallucination audits
+Lyra/Echo is built with governance at the foundation. The system incorporates an AI Constitution defining non-negotiable behavioral boundaries and policies for memory ethics, sensor use, data retention, and autonomy. 
+Policy topics cover model-provenance and training-data requirements, energy-impact constraints, a full incident response framework for model misbehavior, and audits for drift, bias, and hallucination.
 
 ---
 
@@ -86,45 +78,16 @@ The system incorporates:
 
 ---
 
-# Current Status (2025-11)
-
-Lyra Echo is in the architecture + early implementation phase.
-
-### **Physical Build**
-- Fabrication of physical mirror interface underway  
-- Mirror UI design prepared - data dashboards and conversational UI 
-- Presence sensing tested and validated  
-- Facial regcognition models built and functional
-
-### **Software Stack**
-- Governance framework established  
-- Administrative + AI policies authored  
-- Architecture diagrams and system design documented  
-- LLM host stable with multiple models available  
-- STT/TTS exploration ongoing (ReSpeaker + XTTS/Parler)  
-- Orchestration layer in planning and prototype stages  
-- Vector memory schema established
-
-### **Not Yet Implemented**
-- Full STT ↔ LLM ↔ TTS loop  
-- Memory TTL enforcement  
-- Drift/hallucination audit automation  
-- Safety-gated tool execution  
-- Complete mirror UI integration  
-
-This documentation will grow and update as implementation progresses from prototype → integration → operational deployment.
-
----
-
 # How to Read This Documentation
 
 - **Design Reference** describes the system’s architecture and long-term roadmap  
-- **Governance** contains the full policy suite and safety framework  
+- **Governance** contains the full policy suite, safety framework, and a risk management program geared toward the use of generative intelligence
 - **Operations** covers procedures, runbooks, and monitoring  
-- **Development** documents model setup and code architecture  
-- **Integration** outlines Home Assistant, MQTT, and vector DB flows  
+- **Development** Model setup and code architecture  
+- **Integration** Home Assistant, MQTT, and vector DB flows  
+- **Current Status** Progress journal
 
-Lyra/Echo is meant to be an adoptable and extensible reference model for private, governed, embedded AI.
+Lyra/Echo is meant to be an adoptable and extensible reference model for private and embedded AI.
 
 ---
 
