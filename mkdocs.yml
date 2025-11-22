@@ -84,7 +84,7 @@ nav:
       - Reference Material: docs/appendices/reference.md
       - Glossary: docs/appendices/reference-appendix.md
 
-  - Entries:
+  - Current Status:
       - Template (2025-11-10): entries/2025-11-10-template.md
       - Open-WebUI, vLLM, and Household Memory (2025-11-20): entries/2025-11-20.md
 
