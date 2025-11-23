@@ -2475,7 +2475,7 @@
 <p>Today we achieved routing Open-WebUI through the vLLM gateway. This is a temporary gui for testing interaction while the final web interface for the mirror is developed. 
 I wired in the first attempt at household memory via Qdrant, using <code>house_profile.yaml</code> as seed knowledge. The yaml is ingested and the difference is vectorized and added to the database. 
 This results in the chain: browser → Open-WebUI → vLLM → Lyra persona wrapper → Qdrant retrieval → answer</p>
-<p>The main goal wasn't fast retrieval for fast retrieval's sake, it was to get a stable, explainable path from a question over the LAN to a grounded answer that knows its host hardware and details of the household in which it operates. Fast retrieval is an added bonus, as this is just one component of a communications stack that is intended to have a conversational response time.</p>
+<p>The main goal was to get a stable, explainable path from a question over the LAN to a grounded answer that knows its host hardware and details of the household in which it operates. Fast retrieval is an added bonus of the gpu, as this is just one component of a communications stack that is intended to have a conversational response time.</p>
 <hr />
 <h2 id="work">Work<a class="headerlink" href="#work" title="Permanent link">&para;</a></h2>
 <h3 id="1-web-interface-gateway-routing">1. Web Interface &amp; Gateway Routing<a class="headerlink" href="#1-web-interface-gateway-routing" title="Permanent link">&para;</a></h3>
