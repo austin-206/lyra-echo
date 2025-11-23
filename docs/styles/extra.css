@@ -1,0 +1,14 @@
+/* Center and size the Lyra images */
+.md-typeset img.lyra-img {
+  display: block;
+  margin: 0.5rem auto;
+  width: 75%;
+}
+
+/* Center the caption */
+.md-typeset .lyra-caption {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}

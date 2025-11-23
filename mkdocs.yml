@@ -88,7 +88,7 @@ nav:
       - Template (2025-11-10): entries/2025-11-10-template.md
       - Open-WebUI, vLLM, and Household Memory (2025-11-20): entries/2025-11-20.md
       - Lyra/Echo Chat Interface Prototype (2025-11-22): entries/2025-11-22.md
-
+      - Model Upgrade, Important Dates, and Gateway Mediated Environmental Capabilities (2025-11-23): entries/2025-11-23.md
 markdown_extensions:
   - admonition
   - tables
@@ -110,6 +110,7 @@ markdown_extensions:
 extra_css:
   - styles/mc.css
   - styles/compact.css
+  - styles/extra.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
