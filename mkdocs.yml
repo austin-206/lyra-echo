@@ -89,6 +89,7 @@ nav:
       - Open-WebUI, vLLM, and Household Memory (2025-11-20): entries/2025-11-20.md
       - Lyra/Echo Chat Interface Prototype (2025-11-22): entries/2025-11-22.md
       - Model Upgrade, Important Dates, and Gateway Mediated Environmental Capabilities (2025-11-23): entries/2025-11-23.md
+      - Weather Provider Refactor, Model Behavior, and Architectural Intentions (2025-11-25): entries/2025-11-25.md
 markdown_extensions:
   - admonition
   - tables
