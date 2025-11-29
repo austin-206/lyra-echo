@@ -16,6 +16,17 @@ sudo systemctl status lyra-orchestrator
 curl http://localhost:8000/healthz
 ```
 
+Verify the gateway, check its logs, and restart the gateway container
+```bash
+docker ps | grep llm-gateway
+```
+```bash
+docker logs llm-gateway --tail 50
+```
+```bash
+docker restart llm-gateway
+```
+
 If restart fails:
 - Check Docker health (`docker ps --filter "status=unhealthy"`).
 - Verify that GPU drivers and Qdrant are running.
@@ -23,6 +34,11 @@ If restart fails:
 ```bash
 lsmod | grep nvidia
 nvidia-smi
+```
+
+Bring the docker stack up
+```bash
+docker compose up -d
 ```
 
 ```bash

@@ -91,5 +91,3 @@ Lyra/Echo is meant to be an adoptable and extensible reference model for private
 
 ---
 
-Last updated: *{{ git_revision_date_localized }}*  
-
