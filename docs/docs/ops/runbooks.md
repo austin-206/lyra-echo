@@ -16,6 +16,21 @@ sudo systemctl status lyra-orchestrator
 curl http://localhost:8000/healthz
 ```
 
+Check that Docker is up, from the compose folder. If it says active (running), good. If it’s inactive or failed, start it.
+```bash
+sudo systemctl status docker
+```
+```bash
+sudo systemctl start docker
+```
+Check it, if down bring it up
+```bash
+docker ps
+```
+```bash
+docker compose up -d
+```
+
 Verify the gateway, check its logs, and restart the gateway container
 ```bash
 docker ps | grep llm-gateway
@@ -34,11 +49,6 @@ If restart fails:
 ```bash
 lsmod | grep nvidia
 nvidia-smi
-```
-
-Bring the docker stack up
-```bash
-docker compose up -d
 ```
 
 ```bash
