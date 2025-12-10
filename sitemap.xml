@@ -93,6 +93,10 @@
          <lastmod>2025-12-10</lastmod>
     </url>
     <url>
+         <loc>https://austin-206.github.io/lyra-echo/docs/ops/backup/</loc>
+         <lastmod>2025-12-10</lastmod>
+    </url>
+    <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ops/maintenance/</loc>
          <lastmod>2025-12-10</lastmod>
     </url>
@@ -101,15 +105,11 @@
          <lastmod>2025-12-10</lastmod>
     </url>
     <url>
+         <loc>https://austin-206.github.io/lyra-echo/docs/ops/recovery/</loc>
+         <lastmod>2025-12-10</lastmod>
+    </url>
+    <url>
          <loc>https://austin-206.github.io/lyra-echo/docs/ops/runbooks/</loc>
-         <lastmod>2025-12-10</lastmod>
-    </url>
-    <url>
-         <loc>https://austin-206.github.io/lyra-echo/docs/ops/temp/backup/</loc>
-         <lastmod>2025-12-10</lastmod>
-    </url>
-    <url>
-         <loc>https://austin-206.github.io/lyra-echo/docs/ops/temp/recovery/</loc>
          <lastmod>2025-12-10</lastmod>
     </url>
     <url>
