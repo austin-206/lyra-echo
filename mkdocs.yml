@@ -45,7 +45,10 @@ nav:
       - Governance References: docs/gov-ref.md
 
   - Operations:
-      - Runbooks: docs/ops/runbooks.md
+      - Runbooks: 
+          - Runbooks: docs/ops/runbooks.md
+          - Backup: docs/ops/backup.md
+          - Restore: docs/ops/recovery.md
       - Maintenance: docs/ops/maintenance.md
       - Monitoring: docs/ops/monitoring.md
 
@@ -66,6 +69,7 @@ nav:
       - Threat Model: docs/security/threat-model.md
       - Hardening Guide: docs/security/hardening.md
       - Assessment Checklist: docs/security/assessments.md
+      - OWASP LLM Top 10 for Lyra/Echo: docs/security/lyras_top10.md  
 
   - Architecture Annex:
       - Diagrams: docs/architecture/diagrams.md
@@ -90,6 +94,7 @@ nav:
       - Lyra/Echo Chat Interface Prototype (2025-11-22): entries/2025-11-22.md
       - Model Upgrade, Important Dates, and Gateway Mediated Environmental Capabilities (2025-11-23): entries/2025-11-23.md
       - Weather Provider Refactor, Model Behavior, and Architectural Intentions (2025-11-25): entries/2025-11-25.md
+      - Backup and Recovery Procedure, Backup to NAS (2025-12-07): entries/2025-12-07.md
 markdown_extensions:
   - admonition
   - tables
