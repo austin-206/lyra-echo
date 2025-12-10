@@ -47,8 +47,8 @@ nav:
   - Operations:
       - Runbooks: 
           - Runbooks: docs/ops/runbooks.md
-          - Backup: docs/ops/backup.md
-          - Restore: docs/ops/recovery.md
+ #         - Backup: docs/ops/backup.md
+#          - Restore: docs/ops/recovery.md
       - Maintenance: docs/ops/maintenance.md
       - Monitoring: docs/ops/monitoring.md
 
