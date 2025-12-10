@@ -1,0 +1,663 @@
+---
+title: "OWASP LLM Top 10 for the Lyra System"
+summary: "A mapping of the OWASP LLM Top 10 risks to the Lyra household intelligence ecosystem, including risk definitions compatible with the Lyra Risk Simulator."
+description: "This document aligns the OWASP LLM Top 10 with Lyra’s governance and risk model, covering prompt injection, supply chain compromise, RAG poisoning, excessive agency, misinformation, and other risks relevant to a fully capable Lyra system."
+tags:
+  - governance
+  - risk
+  - owasp
+  - llm
+  - security
+  - lyra
+---
+
+# OWASP LLM Top 10 for the Lyra System 
+
+## 1. Purpose and Scope
+
+This document maps the <a href="https://genai.owasp.org/llm-top-10/" target="_blank">OWASP LLM Top 10</a> risks to the Lyra ecosystem, using Lyra’s risk framework. The intention is to consider the inherent risk of generative household intelligence of the near future through the lens of assessing and managing the risks in enterprise use of AI today. 
+
+The focus is on the full Lyra stack as a household intelligence system.
+
+Lyra as desinged is a local, self-hosted assistant with multiple external data tools, internal knowledge and RAG memory, image/audio/video perception, scheduling and automation authority, a local API graph, and a long-running persistent identity.
+
+It is a system that has multiple external tool chains, performs tasks end-to-end, has real-world information access (maps, flights, traffic, weather), and has access to household data from its own database as well as calendars and sensor input. It manages long-term memory, can author or modify configuration files, has STT/TTS in a closed loop, has face recognition and presence detection, and detects and responds to multiple household users.
+
+In this configuration, Lyra interacts with systems, not just prompts.The OWASP categories are treated as system risks in addition to risks from model behaviors.
+
+Each OWASP item below includes quantitative risk characteristics and a risk object definition compatible with the Lyra Risk Simulator.
+
+---
+
+## 2. <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank">LLM01 – Prompt Injection</a>
+
+### 2.1 Context for the Lyra System
+
+With multiple tools available, prompt injection is no longer just jailbreaking the chat. It can cause cross-tool manipulation, including incorrect flight lookup, wrong navigation advice, false or misleading weather warnings, incorrect reminders, schedules being modified incorrectly, incorrect home automation triggers, or a misconfiguration of Lyra’s own settings or local services
+
+The primary concern is task-level harm, which results in the user acting on incorrect outputs that were produced under adversarial or simply malformed input.
+
+### 2.2 Risk Characteristics
+
+**Impact (I)**  
+Primarily “task error impact,” for example:
+
+- time lost due to wrong travel advice or missed connections
+- missed appointments due to wrong reminders
+- misconfigured home automations (heating, lighting, fans, etc.)
+- bad configuration applied to a device or service, requiring rework
+- trust degradation in Lyra as a household assistant
+
+Units can be modeled in hours of rework converted to cost, plus any direct financial loss.
+
+**Probability (P)**  
+Annual probability that:
+
+- a user, guest, or test scenario triggers a prompt injection or malformed query  
+- Lyra responds with plausible but incorrect guidance  
+- and the user acts on that guidance before detecting the error
+
+As Lyra gains more tools and authority, the attack and error surfaces increase, even without adversaries.
+
+### 2.3 Risk Object Definition
+
+```text
+ID: LLM01
+Title: Prompt Injection Impacting Task Execution
+Description: A user instruction bypasses safety context, producing misleading output that results in harmful action before detection. Includes incorrect advice for travel, schedules, automations, or system configurations.
+Impact Definition: Total cost of following incorrect advice, including rework time, operational delays, and direct financial loss.
+Probability Definition: Annual chance that a harmful, tool-influencing answer is acted upon before detecting the error.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Gateway safety filters
+  - Output reasonableness checks
+  - RAG grounding
+  - Persona and instruction hardening
+Residual Notes:
+  - Risk grows with the number and power of tools exposed.
+```
+
+---
+
+## 3. <a href="https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/" target="_blank">LLM02 – Sensitive Information Disclosure</a>
+
+### 3.1 Context in the Lyra System
+
+As Lyra matures, she will accumulate and infer more about household life, including daily routines and habits, calendars and schedules, device states and preferred settings, rough location or presence information, security events via IDS/log streams once integrated, stored memories of conversations, and implicit patterns or the routines of the household learned via RAG. 
+
+If Lyra can be prompted into disclosing these across contexts (“Tell me everything you know about X”), this becomes a household privacy issue.
+
+### 3.2 Risk Characteristics
+
+**Impact (I)** might include:
+
+- mis-exposure of private information to a guest or another household member
+- memory content leaking via logs or debug interfaces
+- sensor or audio perception being summarized out of context
+- debugging output that reveals internal states or patterns
+- incorrect face recognition reporting “who is home” to the wrong person
+
+**Probability (P)**  
+Annual probability that:
+
+- a mis-scoped response shares private context with the wrong human recipient  
+- or logs and observability tools reveal more detail than intended
+
+Multiple users, multiple contexts, and multiple modalities (cameras, RAG, sensors) all increase leakage opportunities.
+
+### 3.3 Risk Object Definition
+
+```text
+ID: LLM02
+Title: Accidental Disclosure of Household Private Information
+Description: Lyra reveals context-appropriate but private information to an unauthorized user or context (e.g., guest, child, secondary household member), or via logs.
+Impact Definition: Cost of privacy harm, trust damage, cleanup of logs/memory, and any configuration changes required.
+Probability Definition: Annual chance of mis-scoped disclosure or unintended exposure through interfaces.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - User identity routing and session-scoped context
+  - Memory compartmentalization by user/role
+  - Log sanitation and access controls
+Residual Notes:
+  - Risk rises as multi-user personalization and memory depth increase.
+```
+
+---
+
+## 4. <a href="https://genai.owasp.org/llmrisk/llm032025-supply-chain/" target="_blank">LLM03 – Supply Chain Vulnerabilities</a>
+
+### 4.1 Context in the Lyra System
+
+In a full ecosystem, the following elements are updated over time:
+
+- core LLM models and embeddings
+- Python libraries and SDKs
+- Docker images and base OS images
+- STT/TTS engines and models
+- face recognition and CV libraries (e.g., OpenCV, ONNX, Mediapipe)
+- integration modules for maps, flight APIs, calendars, etc.
+
+Each update is a potential **supply chain entry point**.
+
+### 4.2 Risk Characteristics
+
+**Impact (I)** if a supply chain component is compromised:
+
+- code execution on Lyra or Vega
+- malicious instructions sent to IoT or automation systems
+- tampered models or embeddings affecting decisions
+- compromised API clients returning manipulated data
+- RAG ingestion of malicious or manipulated content
+
+This may require a full rebuild and trust reset of Lyra and dependent components.
+
+**Probability (P)**  
+Annual probability that:
+
+- a model, library, or image pulled from upstream is malicious or compromised  
+- and that it is deployed into the running system before detection
+
+Each new integration adds an additional tool edge; even with pinned versions, some risk remains.
+
+### 4.3 Risk Object Definition
+
+```text
+ID: LLM03
+Title: Malicious Model/Library/Tool Introduced via Update
+Description: A compromised model, dependency, or container introduces malicious behavior or remote code execution into the Lyra ecosystem.
+Impact Definition: Rebuild and verification cost across Lyra, Deb, and other affected systems, including potential data loss remediation.
+Probability Definition: Annual chance of deploying a compromised dependency in normal maintenance or feature work.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Version pinning and reproducible builds
+  - Internal mirrors or caches for trusted artifacts
+  - Network isolation for runtime containers
+  - Periodic security reviews of third-party code
+Residual Notes:
+  - Low-frequency, high-impact; one of the largest catastrophic risk categories.
+```
+
+---
+
+## 5. <a href="https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/" target="_blank">LLM04 – Model / Data Poisoning</a>
+
+### 5.1 Context in the Lyra System
+
+As Lyra’s RAG and memory expand:
+
+- corpus grows large over time
+- multiple sources feed the vector database
+- ingestion pipelines may be partly or fully automated
+- household notes and documentation are stored in RAG
+- camera perception may generate embeddings or tags
+- sensors provide streaming data that is summarized
+- external references and URLs may be imported
+
+“Poisoning” includes both malicious and accidental contamination, as well as stale data being treated as current truth.
+
+### 5.2 Risk Characteristics
+
+**Impact (I)** may include:
+
+- incorrect system or network configurations
+- degraded assistant quality and reliability
+- persistent misinformation anchored in stored memory
+- bad reasoning loops anchored in corrupted context
+- long-term contamination of memory that requires audit and cleanup
+- reindexing or partial rebuild of the vector store
+
+**Probability (P)**  
+Annual probability that:
+
+- incorrect or misleading data enters RAG or long-term memory and materially influences decisions before being detected
+
+The risk increases significantly as ingestion becomes more automated and the corpus grows.
+
+### 5.3 Risk Object Definition
+
+```text
+ID: LLM04
+Title: RAG Memory Poisoning
+Description: Lyra ingests incorrect, stale, or manipulated documents into the vector store or memory, causing persistent distortion of reasoning and guidance.
+Impact Definition: Cost of incorrect decisions based on contaminated memory plus cost to diagnose, purge, and re-index the affected data.
+Probability Definition: Annual chance of harmful ingestion of misleading or stale content that influences behavior.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Manual curation and approval of ingress sources
+  - Separation of “draft” vs “trusted” document pools
+  - Regular audits of high-impact documents
+Residual Notes:
+  - Likely to be a significant recurring contributor to ALE.
+```
+
+---
+
+## 6. <a href="https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/" target="_blank">LLM05 – Improper Output Handling</a>
+
+### 6.1 Context in the Lyra System
+
+As Lyra gains more tools, she may output:
+
+- HTML or Markdown
+- JSON or structured data
+- shell snippets or configuration fragments
+- commands for local tools
+- UI components or layout instructions
+
+If front-end systems (MagicMirror, dashboards, admin panels) render this output without proper escaping or validation, risks include:
+
+- cross-site scripting (XSS)
+- HTML/UI injection
+- log poisoning
+- configuration injection, if text is written into config files directly
+- unintended file or command execution in automation pipelines
+
+### 6.2 Risk Characteristics
+
+**Impact (I)**  
+Potentially up to:
+
+- local browser or UI compromise
+- configuration corruption
+- local admin sessions affected
+- manual cleanup and configuration repair
+
+Higher if Lyra output is ever fed into automation paths without human review.
+
+**Probability (P)**  
+Annual probability that:
+
+- a malformed or adversarial output string  
+- is rendered or applied in a context that executes or interprets it unsafely
+
+Rises if the UI supports rich rendering or if Lyra output is used as-is in downstream processes.
+
+### 6.3 Risk Object Definition
+
+```text
+ID: LLM05
+Title: Unsafe Rendering of Lyra Output in UI
+Description: Output containing markup or scripts is rendered unsafely in a UI or used directly in configs, leading to local injection or corruption.
+Impact Definition: Cost to correct UI or configuration corruption and handle any local compromise.
+Probability Definition: Annual chance that unsafe output is consumed by a rendering or automation component without sanitization.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Strict plain-text rendering for general responses
+  - Explicit escaping for structured outputs
+  - Separate “preview and approve” step before applying configs
+Residual Notes:
+  - Risk grows with richer UI behavior and automation pathways.
+```
+
+---
+
+## 7. <a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" target="_blank">LLM06 – Excessive Agency</a>
+
+### 7.1 Context in the Lyra System
+
+With expanded authority, Lyra may:
+
+- control IoT devices and Home Assistant
+- write or edit configuration files
+- schedule events or reminders
+- query and act on location and traffic data
+- manage routines (e.g., lights, fans, environmental systems)
+- interact with OS-level tools or scripts (if enabled)
+- issue outbound HTTP calls to local services
+
+The risk is not autonomous intent, but **over-privileged tools and insufficient guardrails**, causing:
+
+- tool misuse
+- malformed outputs feeding tools
+- cascading failures in automations
+- overconfidence in performing multi-step tasks
+
+### 7.2 Risk Characteristics
+
+**Impact (I)** can include:
+
+- incorrect or inconvenient home automations
+- missed or incorrect reminders
+- time lost debugging and restoring configurations
+- possible physical impact (comfort, lighting, HVAC behavior)
+- higher if connected to any safety-relevant systems
+
+**Probability (P)**  
+Annual probability that:
+
+- a misrouted tool call or malformed command  
+- causes a non-trivial problem in the home environment
+
+This risk rises as more tools are added and as Lyra is trusted with more complex task chains.
+
+### 7.3 Risk Object Definition
+
+```text
+ID: LLM06
+Title: Harmful Outcomes from Over-Privileged Tools
+Description: Lyra misuses tools or chains tools in unintended ways (e.g., misconfiguring home automation, editing critical files, or issuing dangerous commands).
+Impact Definition: Cost of restoring automation, configurations, and any physical-world effects.
+Probability Definition: Annual chance that tool misuse leads to noticeable negative impact.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Human-in-the-loop confirmation for sensitive actions
+  - Scoping tools to narrow, reversible actions
+  - Isolation of higher-risk tools in separate microservices
+Residual Notes:
+  - Strongly tied to the design of Lyra’s action and authority layer.
+```
+
+---
+
+## 8. <a href="https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/" target="_blank">LLM07 – System Prompt Leakage</a>
+
+### 8.1 Context the Lyra System
+
+The system prompt and configuration may include:
+
+- memory keys and schema descriptions
+- safety rules and constraint schemas
+- persona ethics and behavioral norms
+- tool routing patterns and allowed actions
+- instructions for handling policy or safety questions
+- references to `house_profile` and other structured sources
+- mappings to governance frameworks
+
+Although not housing passwords or secrets, leakage of these internals provides an attacker or adversarial user with **blueprints** for jailbreak strategies and targeted manipulations.
+
+### 8.2 Risk Characteristics
+
+**Impact (I)** can include:
+
+- increased success rate of prompt injection attempts
+- destabilization of persona and safety behavior
+- need to rotate, redesign, and revalidate prompts and governance schemas
+- time spent on remedial design and testing
+
+**Probability (P)**  
+Annual probability that:
+
+- internal instructions or routing hints are exposed via conversations, logs, or debug tools
+
+Grows with the number of users, complexity of interactions, and debugging/introspection features.
+
+### 8.3 Risk Object Definition
+
+```text
+ID: LLM07
+Title: Exposure of System Prompt & Governance Rules
+Description: System prompts, routing logic, and governance instructions are exposed, enabling targeted manipulation or jailbreak tuning.
+Impact Definition: Cost of revising prompts, updating governance schemas, and revalidating behavior, plus any knock-on increase in other risks.
+Probability Definition: Annual chance of leakage through logs, UI, or interactions.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Avoid exposing internal instructions verbatim
+  - Sanitize logs and debug output
+  - Limit access to introspection tools
+Residual Notes:
+  - Acts as a multiplier for other risks rather than a standalone catastrophic event.
+```
+
+---
+
+## 9. <a href="https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/" target="_blank">LLM08 – Vector DB / Embedding Weaknesses</a>
+
+### 9.1 Context in the Lyra System
+
+Embeddings become the primary knowledge substrate. Risks include:
+
+- embedding inversion (reconstruction of sensitive content from vectors)
+- adversarial or specially crafted embeddings
+- “benign-looking” text that warps RAG retrieval
+- semantic collisions and ambiguous embeddings
+- stale or contradictory documents degrading retrieval quality
+- contamination across years of incremental ingest
+
+### 9.2 Risk Characteristics
+
+**Impact (I)** may be:
+
+- systematic retrieval of wrong or misleading documents
+- subtle but persistent reasoning errors
+- debugging and reindexing efforts
+- potential privacy concerns if embeddings are misused or exfiltrated
+
+**Probability (P)**  
+Annual probability that:
+
+- vector space weaknesses cause materially incorrect retrieval  
+- or allow reconstruction/leakage of sensitive text from embeddings
+
+Probability increases sharply with automated ingestion, larger corpora, more embedding models, or untrusted sources.
+
+### 9.3 Risk Object Definition
+
+```text
+ID: LLM08
+Title: Vector Store Attacks or Semantic Collisions
+Description: Adversarial or malformed embeddings distort retrieval or leak semantic information, causing systematic reasoning errors or privacy issues.
+Impact Definition: Cost of debugging RAG behavior, cleaning the vector store, and adjusting embedding models or ingestion rules.
+Probability Definition: Annual chance that vector-space issues cause harmful or misleading retrieval.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Strict control of ingestion sources
+  - Regular audits of high-impact content
+  - Optionally, embedding model rotation or ensemble strategies
+Residual Notes:
+  - Closely related to LLM04; can be treated jointly or separately in the risk register.
+```
+
+---
+
+## <a href="https://genai.owasp.org/llmrisk/llm092025-misinformation/" target="_blank">10. LLM09 – Misinformation / Reliance</a>
+
+### 10.1 Context in the Lyra System
+
+Lyra will act as a decision support engine for the household and will be asked questions such as:
+
+- “What’s the best route to X?”
+- “When should we leave for the airport?”
+- “Is this medication interaction safe?” (even if discouraged)
+- “What are the tides at time/place?”
+- “Why is home automation rule Y failing?”
+- “Which contractor option seems most appropriate?”
+
+Incorrect answers can have tangible real-world cost in time, money, or safety.
+
+### 10.2 Risk Characteristics
+
+**Impact (I)** ranges from:
+
+- minor annoyances and small rework
+- moderate travel or scheduling disruptions
+- poor choices in services, purchases, or configuration
+
+**Probability (P)**  
+Even with RAG and external APIs, hallucination and data error are persistent.  
+Annual probability covers:
+
+- consequential misinterpretation of tools or APIs
+- hallucinations that appear trustworthy
+- user acting on information without cross-checking
+
+This is a low-impact, high-frequency category that can accumulate significant ALE over time.
+
+### 10.3 Risk Object Definition
+
+```text
+ID: LLM09
+Title: Acting on Incorrect External or Model-Generated Information
+Description: Lyra provides incorrect data or advice (from model or tools) that leads to suboptimal or harmful decisions.
+Impact Definition: Cost of time lost, travel delays, wrong repairs, resource waste, or missed opportunities.
+Probability Definition: Annual chance of a consequential misinformation event that the user acts on.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Multi-source verification for higher-stakes decisions
+  - Clear UX cues about uncertainty
+  - RAG grounding on trusted data
+Residual Notes:
+  - Likely a constant background contributor to ALE.
+```
+
+---
+
+## <a href="https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/" target="_blank">11. LLM10 – Unbounded Consumption (Resource Attacks)</a>
+
+### 11.1 Context in the Lyra System
+
+A future Lyra may face:
+
+- loops in STT → LLM → TTS cycles
+- vision loops or constant camera streaming
+- multiple Pi nodes and sensors emitting frequent events
+- high token-output tasks (summaries, large docs)
+- RAG-heavy workflows
+- long-running chains of external tool calls
+- runaway logs or unbounded telemetry
+
+This can lead to resource exhaustion:
+
+- GPU VRAM spikes
+- CPU saturation
+- memory leaks in gateway or RAG processes
+- infinite or deeply nested tool recursion
+- MQTT or event-bus flooding
+
+### 11.2 Risk Characteristics
+
+**Impact (I)** includes:
+
+- temporary service degradation or unavailability
+- container restarts and log cleanup
+- diagnostic time to locate and fix loops
+- potential impact on other household services using the same hardware
+
+**Probability (P)**  
+Annual probability that:
+
+- a runaway loop or high-load pattern is triggered by user requests, misconfiguration, or bugs in orchestration
+
+This grows with feature complexity and automation density.
+
+### 11.3 Risk Object Definition
+
+```text
+ID: LLM10
+Title: Runaway Resource Consumption
+Description: Recursive workloads, unbounded responses, or sensor overload saturate CPU/GPU/memory, causing downtime or degraded service.
+Impact Definition: Downtime and recovery cost, including restarts, cleanup, and diagnosis.
+Probability Definition: Annual chance of uncontrolled resource use due to loops, misconfiguration, or bugs.
+Inputs Needed:
+    i_min:
+    i_mode:
+    i_max:
+    p_alpha:
+    p_beta:
+Mitigations:
+  - Token and context-length limits
+  - Tool call depth limits
+  - Rate limiting for external and internal calls
+  - Timeouts and circuit-breakers for tools
+Residual Notes:
+  - Typically nuisance-level per incident, but can be frequent.
+```
+
+---
+
+## 12. Risk Landscape Summary
+
+### 12.1 Likely Clusters in Lyra’s ALE Distribution
+
+From a quantitative perspective, once values are calibrated, the Monte Carlo simulator will likely show:
+
+- **High-impact, low-frequency (catastrophic)**
+  - LLM03 – Supply Chain Compromise  
+  - LLM04 / LLM08 – Poisoned Memory / Vector Store (if ingestion is automated or scaled)  
+  - LLM06 – Excessive Agency (if Lyra gains strong action authority)
+
+- **Medium-impact, medium-frequency (material)**
+  - LLM01 – Prompt Injection  
+  - LLM02 – Sensitive Disclosure  
+  - LLM05 – Improper Output Handling  
+  - LLM09 – Misinformation / Reliance
+
+- **Low-impact, high-frequency (nuisance)**
+  - LLM10 – Resource Consumption  
+  - LLM07 – System Prompt Leakage (primarily as a contributor to other risks)
+
+### 12.2 Expected Drivers of Annual Loss
+
+In terms of Annual Loss Expectancy:
+
+- RAG and vector-related issues (LLM04/LLM08) are likely to be top recurring contributors.  
+- Misinformation and reliance (LLM09) will form a constant background “friction cost.”  
+- Supply chain compromise (LLM03) remains a long-tail, low-probability but high-impact event.  
+- Prompt injection (LLM01) and excessive agency (LLM06) will depend heavily on the strictness of the gateway and the design of the tool layer.
+
+
+## 13. Conclusion
+This analysis shows that once a household AI gains tools, memory, and autonomy, its risk profile becomes structurally similar to enterprise AI systems. The OWASP LLM Top-10 categories map directly onto Lyra’s architecture, and the quantitative modeling clarifies how those risks concentrate.
+
+Three patterns emerge:
+
+The highest long-term contributors to loss are integrity failures.
+RAG poisoning, vector-store drift, and misinformation produce recurring operational friction.
+These risks are not adversarial; they are inherent to any system that stores and reasons over accumulating context.
+
+The most severe risks come from the supply chain and from excessive authority.
+A compromised update or an over-privileged tool interface has the potential for catastrophic impact, even in a home environment.
+
+Prompt injection, output handling, and resource loops are material but governable.
+Their impact depends almost entirely on architectural decisions — gateway design, tool scoping, and memory discipline — rather than on the underlying model.
+
+Viewed through the lens of enterprise AI risk management, the conclusion is clear:
+household AI systems should be governed based on their capabilities, not their scale.
+When an assistant can perform tasks, access data, control devices, and maintain long-term memory, it becomes a small cyber-physical ecosystem. The same principles used to manage organizational AI risk apply — they simply manifest in different contexts.
+
+The Lyra system makes this visible early.
+As generative household intelligence becomes common over the next decade, the risks identified here will shift from unusual to routine. This analysis provides a starting point for designing controls that ensure these systems remain safe, reliable, and aligned with their users' intent.

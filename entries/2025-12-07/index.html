@@ -8,25 +8,23 @@
       
       
       
-        <link rel="canonical" href="https://austin-206.github.io/lyra-echo/docs/ui/mirror-interface/">
+        <link rel="canonical" href="https://austin-206.github.io/lyra-echo/entries/2025-12-07/">
       
       
-        <link rel="prev" href="../../architecture/network/">
+        <link rel="prev" href="../2025-11-25/">
       
       
-        <link rel="next" href="../voice-interaction/">
       
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>Mirror Interface - Lyra/Echo</title>
+        <title>Backups, Systemd Automation, and Monitoring (2025-12-07) - Lyra/Echo</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -45,13 +43,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../styles/mc.css">
+      <link rel="stylesheet" href="../../styles/mc.css">
     
-      <link rel="stylesheet" href="../../../styles/compact.css">
+      <link rel="stylesheet" href="../../styles/compact.css">
     
-      <link rel="stylesheet" href="../../../styles/extra.css">
+      <link rel="stylesheet" href="../../styles/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mirror-interface" class="md-skip">
+        <a href="#07-december-2025-backups-monitoring" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Lyra/Echo" class="md-header__button md-logo" aria-label="Lyra/Echo" data-md-component="logo">
+    <a href="../.." title="Lyra/Echo" class="md-header__button md-logo" aria-label="Lyra/Echo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mirror Interface
+              Backups, Systemd Automation, and Monitoring (2025-12-07)
             
           </span>
         </div>
@@ -184,7 +182,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Lyra/Echo" class="md-nav__button md-logo" aria-label="Lyra/Echo" data-md-component="logo">
+    <a href="../.." title="Lyra/Echo" class="md-nav__button md-logo" aria-label="Lyra/Echo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -202,7 +200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -269,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/" class="md-nav__link">
+      <a href="../../docs/architecture/" class="md-nav__link">
         
   
   
@@ -292,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../components/" class="md-nav__link">
+      <a href="../../docs/components/" class="md-nav__link">
         
   
   
@@ -315,7 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roadmap/" class="md-nav__link">
+      <a href="../../docs/roadmap/" class="md-nav__link">
         
   
   
@@ -338,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orchestration/" class="md-nav__link">
+      <a href="../../docs/orchestration/" class="md-nav__link">
         
   
   
@@ -361,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agents/" class="md-nav__link">
+      <a href="../../docs/agents/" class="md-nav__link">
         
   
   
@@ -429,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../governance/" class="md-nav__link">
+      <a href="../../docs/governance/" class="md-nav__link">
         
   
   
@@ -459,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../risk-management/" class="md-nav__link">
+      <a href="../../docs/risk-management/" class="md-nav__link">
         
   
   
@@ -482,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../risk-simulator/" class="md-nav__link">
+      <a href="../../docs/risk-simulator/" class="md-nav__link">
         
   
   
@@ -543,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/model-lifecycle/" class="md-nav__link">
+      <a href="../../docs/policies/model-lifecycle/" class="md-nav__link">
         
   
   
@@ -573,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/prompt-and-agent/" class="md-nav__link">
+      <a href="../../docs/policies/prompt-and-agent/" class="md-nav__link">
         
   
   
@@ -603,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/data-privacy/" class="md-nav__link">
+      <a href="../../docs/policies/data-privacy/" class="md-nav__link">
         
   
   
@@ -633,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/access-control/" class="md-nav__link">
+      <a href="../../docs/policies/access-control/" class="md-nav__link">
         
   
   
@@ -663,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/incident-response/" class="md-nav__link">
+      <a href="../../docs/policies/incident-response/" class="md-nav__link">
         
   
   
@@ -693,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/audit-review/" class="md-nav__link">
+      <a href="../../docs/policies/audit-review/" class="md-nav__link">
         
   
   
@@ -723,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/change-management/" class="md-nav__link">
+      <a href="../../docs/policies/change-management/" class="md-nav__link">
         
   
   
@@ -753,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ethical-use/" class="md-nav__link">
+      <a href="../../docs/policies/ethical-use/" class="md-nav__link">
         
   
   
@@ -783,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/power-continuity/" class="md-nav__link">
+      <a href="../../docs/policies/power-continuity/" class="md-nav__link">
         
   
   
@@ -813,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/documentation/" class="md-nav__link">
+      <a href="../../docs/policies/documentation/" class="md-nav__link">
         
   
   
@@ -889,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ai-policy/constitution/" class="md-nav__link">
+      <a href="../../docs/policies/ai-policy/constitution/" class="md-nav__link">
         
   
   
@@ -919,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ai-policy/sensor-perception/" class="md-nav__link">
+      <a href="../../docs/policies/ai-policy/sensor-perception/" class="md-nav__link">
         
   
   
@@ -949,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ai-policy/autonomy-action/" class="md-nav__link">
+      <a href="../../docs/policies/ai-policy/autonomy-action/" class="md-nav__link">
         
   
   
@@ -979,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ai-policy/emotional-interaction/" class="md-nav__link">
+      <a href="../../docs/policies/ai-policy/emotional-interaction/" class="md-nav__link">
         
   
   
@@ -1009,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ai-policy/environmental-impact/" class="md-nav__link">
+      <a href="../../docs/policies/ai-policy/environmental-impact/" class="md-nav__link">
         
   
   
@@ -1039,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ai-policy/trainingdata-ethics/" class="md-nav__link">
+      <a href="../../docs/policies/ai-policy/trainingdata-ethics/" class="md-nav__link">
         
   
   
@@ -1069,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policies/ai-policy/autonomous-learning/" class="md-nav__link">
+      <a href="../../docs/policies/ai-policy/autonomous-learning/" class="md-nav__link">
         
   
   
@@ -1107,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gov-ref/" class="md-nav__link">
+      <a href="../../docs/gov-ref/" class="md-nav__link">
         
   
   
@@ -1220,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops/runbooks/" class="md-nav__link">
+      <a href="../../docs/ops/runbooks/" class="md-nav__link">
         
   
   
@@ -1243,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops/backup.md" class="md-nav__link">
+      <a href="../../docs/ops/backup.md" class="md-nav__link">
         
   
   
@@ -1266,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops/recovery.md" class="md-nav__link">
+      <a href="../../docs/ops/recovery.md" class="md-nav__link">
         
   
   
@@ -1297,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops/maintenance/" class="md-nav__link">
+      <a href="../../docs/ops/maintenance/" class="md-nav__link">
         
   
   
@@ -1320,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops/monitoring/" class="md-nav__link">
+      <a href="../../docs/ops/monitoring/" class="md-nav__link">
         
   
   
@@ -1388,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/setup/" class="md-nav__link">
+      <a href="../../docs/dev/setup/" class="md-nav__link">
         
   
   
@@ -1411,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/llm-setup/" class="md-nav__link">
+      <a href="../../docs/dev/llm-setup/" class="md-nav__link">
         
   
   
@@ -1434,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/api/" class="md-nav__link">
+      <a href="../../docs/dev/api/" class="md-nav__link">
         
   
   
@@ -1457,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/models/" class="md-nav__link">
+      <a href="../../docs/dev/models/" class="md-nav__link">
         
   
   
@@ -1480,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/testing/" class="md-nav__link">
+      <a href="../../docs/dev/testing/" class="md-nav__link">
         
   
   
@@ -1548,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integration/home-assistant/" class="md-nav__link">
+      <a href="../../docs/integration/home-assistant/" class="md-nav__link">
         
   
   
@@ -1571,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integration/mqtt-topics/" class="md-nav__link">
+      <a href="../../docs/integration/mqtt-topics/" class="md-nav__link">
         
   
   
@@ -1594,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integration/vector-db/" class="md-nav__link">
+      <a href="../../docs/integration/vector-db/" class="md-nav__link">
         
   
   
@@ -1617,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integration/security-onion/" class="md-nav__link">
+      <a href="../../docs/integration/security-onion/" class="md-nav__link">
         
   
   
@@ -1685,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat-model/" class="md-nav__link">
+      <a href="../../docs/security/threat-model/" class="md-nav__link">
         
   
   
@@ -1708,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/hardening/" class="md-nav__link">
+      <a href="../../docs/security/hardening/" class="md-nav__link">
         
   
   
@@ -1731,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/assessments/" class="md-nav__link">
+      <a href="../../docs/security/assessments/" class="md-nav__link">
         
   
   
@@ -1754,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/lyras_top10/" class="md-nav__link">
+      <a href="../../docs/security/lyras_top10/" class="md-nav__link">
         
   
   
@@ -1822,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/diagrams/" class="md-nav__link">
+      <a href="../../docs/architecture/diagrams/" class="md-nav__link">
         
   
   
@@ -1845,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/network/" class="md-nav__link">
+      <a href="../../docs/architecture/network/" class="md-nav__link">
         
   
   
@@ -1872,20 +1870,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -1901,7 +1897,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             UI
@@ -1912,32 +1908,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Mirror Interface
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../docs/ui/mirror-interface/" class="md-nav__link">
         
   
   
@@ -1948,107 +1922,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#layout-twopanel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Layout (Two‑Panel)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#states" class="md-nav__link">
-    <span class="md-ellipsis">
-      States
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-inputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Inputs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behavior-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior Rules
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessibility
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#telemetry-nonpii" class="md-nav__link">
-    <span class="md-ellipsis">
-      Telemetry (non‑PII)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-surface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Surface
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      Future Work
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2061,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../voice-interaction/" class="md-nav__link">
+      <a href="../../docs/ui/voice-interaction/" class="md-nav__link">
         
   
   
@@ -2084,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../personalization/" class="md-nav__link">
+      <a href="../../docs/ui/personalization/" class="md-nav__link">
         
   
   
@@ -2152,7 +2025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/changelog/" class="md-nav__link">
+      <a href="../../docs/release/changelog/" class="md-nav__link">
         
   
   
@@ -2175,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/versioning/" class="md-nav__link">
+      <a href="../../docs/release/versioning/" class="md-nav__link">
         
   
   
@@ -2243,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendices/reference/" class="md-nav__link">
+      <a href="../../docs/appendices/reference/" class="md-nav__link">
         
   
   
@@ -2266,7 +2139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendices/reference-appendix/" class="md-nav__link">
+      <a href="../../docs/appendices/reference-appendix/" class="md-nav__link">
         
   
   
@@ -2293,18 +2166,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -2320,7 +2195,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Current Status
@@ -2334,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entries/2025-11-10-template/" class="md-nav__link">
+      <a href="../2025-11-10-template/" class="md-nav__link">
         
   
   
@@ -2357,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entries/2025-11-20/" class="md-nav__link">
+      <a href="../2025-11-20/" class="md-nav__link">
         
   
   
@@ -2380,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entries/2025-11-22/" class="md-nav__link">
+      <a href="../2025-11-22/" class="md-nav__link">
         
   
   
@@ -2403,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entries/2025-11-23/" class="md-nav__link">
+      <a href="../2025-11-23/" class="md-nav__link">
         
   
   
@@ -2426,7 +2301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entries/2025-11-25/" class="md-nav__link">
+      <a href="../2025-11-25/" class="md-nav__link">
         
   
   
@@ -2446,10 +2321,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../entries/2025-12-07/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Backup and Recovery Procedure, Backup to NAS (2025-12-07)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2460,6 +2357,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2499,81 +2452,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose
+      Context
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#layout-twopanel" class="md-nav__link">
+  <a href="#work" class="md-nav__link">
     <span class="md-ellipsis">
-      Layout (Two‑Panel)
+      Work
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#states" class="md-nav__link">
+  <a href="#observations" class="md-nav__link">
     <span class="md-ellipsis">
-      States
+      Observations
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-inputs" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Inputs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behavior-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior Rules
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessibility
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#telemetry-nonpii" class="md-nav__link">
-    <span class="md-ellipsis">
-      Telemetry (non‑PII)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-surface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Surface
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      Future Work
+      Next Steps
     </span>
   </a>
   
@@ -2595,89 +2503,67 @@
 
 
 
-<h1 id="mirror-interface">Mirror Interface<a class="headerlink" href="#mirror-interface" title="Permanent link">&para;</a></h1>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Define the visual layout and behavior of the smart‑mirror display, including status regions, interaction text, and system indicators. This page specifies what is shown, when it appears, and how the UI degrades safely.</p>
-<hr />
-<h2 id="layout-twopanel">Layout (Two‑Panel)<a class="headerlink" href="#layout-twopanel" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Left Panel — Conversation</strong></li>
-<li>Live transcription (user input) with per‑word streaming.</li>
-<li>Assistant response text (type‑on effect) with partials.</li>
-<li>Turn metadata: timestamp, agent used (optional), action badges.</li>
-<li><strong>Right Panel — Dashboard</strong></li>
-<li>Time/date and day context.</li>
-<li>Calendar agenda (next 5 items).</li>
-<li>Map to destination and travel time based on calendar events</li>
-<li>Weather summary (current + next 12h).</li>
-<li>System tiles: presence, sensors, network/service status.</li>
-</ul>
-<blockquote>
-<p>Panels adapt for single‑panel fallback: the conversation view takes priority; dashboard minimizes to a status bar.</p>
-</blockquote>
-<hr />
-<h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Idle</strong>: ambient clock + compact widgets; presence indicator dormant.</li>
-<li><strong>Listening</strong>: subtle glow/cursor in mic icon; “listening…” caption.</li>
-<li><strong>Thinking</strong>: progress pulse; optional token/latency micro‑meter.</li>
-<li><strong>Speaking</strong>: text type‑out synchronized with TTS; “tap to stop” affordance.</li>
-<li><strong>Error/Degraded</strong>: banner displays recovery hint (“Broker reconnecting”).</li>
-</ul>
-<hr />
-<h2 id="data-inputs">Data Inputs<a class="headerlink" href="#data-inputs" title="Permanent link">&para;</a></h2>
-<ul>
-<li>STT stream (mirror node)</li>
-<li>Orchestrator response stream (Lyra)</li>
-<li>MQTT topics (presence/env/sys)</li>
-<li>Calendar/weather/map providers (local integrations)</li>
-</ul>
-<hr />
-<h2 id="behavior-rules">Behavior Rules<a class="headerlink" href="#behavior-rules" title="Permanent link">&para;</a></h2>
-<ul>
-<li>New turns push older content upward; keep a rolling window (e.g., last 10 turns).</li>
-<li>Collapse long assistant outputs after completion with “expand” affordance.</li>
-<li>If TTS fails, continue to display text; add inline notice.</li>
-<li>If STT is interrupted, keep partial transcript with “incomplete” badge.</li>
-</ul>
-<hr />
-<h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">&para;</a></h2>
-<ul>
-<li>High‑contrast theme and large type sizes for visibility through reflective glass.</li>
-<li>Captions always available (TTS never without text).</li>
-<li>Motion and flashing kept minimal</li>
-<li>Color used as a <em>secondary</em> signal; rely on text labels and icons.</li>
-</ul>
-<hr />
-<h2 id="telemetry-nonpii">Telemetry (non‑PII)<a class="headerlink" href="#telemetry-nonpii" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Per‑turn latency budget (stt/llm/tts segments).</li>
-<li>Error counts and network state.</li>
-<li>Render frame times (optional).</li>
-</ul>
-<hr />
-<h2 id="configuration-surface">Configuration Surface<a class="headerlink" href="#configuration-surface" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Toggle widgets (calendar/weather/map service tiles).</li>
-<li>Set turn window length and type‑on speed.</li>
-<li>Enable/disable presence‑based auto‑wake.</li>
-<li>Choose compact/expanded dashboard modes.</li>
-</ul>
-<hr />
-<h2 id="future-work">Future Work<a class="headerlink" href="#future-work" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Event‑driven “card” system for actions (timers, reminders, media).</li>
-<li>Live captions for media playback.</li>
-<li>Dynamic layout profiles for different users (see Personalization).</li>
-<li>Facial recognition hooks for user‑specific dashboards (planned; see Security).</li>
-</ul>
-<p><em>Last updated: 2025-11-10</em></p>
+<h1 id="07-december-2025-backups-monitoring">07 December 2025: Backups &amp; Monitoring<a class="headerlink" href="#07-december-2025-backups-monitoring" title="Permanent link">&para;</a></h1>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>While the work continues on the physical mirror build and database development, I decided to take care of some necessary disaster recovery work by implementing automated backups to the devices in the Lyra system. To accomplish this I configured <a href="https://www.borgbackup.org/" target="_blank">BorgBackup</a> automations on Lyra, Deb, and several raspberry pi's. Full system backup repositories are hosted on a NAS device via NFS. A scenario-based Disaster Recovery Runbook was also added to the documents library. End to end bare metal recovery is now possible for all nodes.</p>
+<h2 id="work">Work<a class="headerlink" href="#work" title="Permanent link">&para;</a></h2>
+<p>Mounted NAS NFS export on each host and created permanent <code>/etc/fstab</code> entries, and initialized encrypted Borg repositories for each device. After the backups completed I exported Borg encryption keys for all hosts.</p>
+<p>A template backup script was applied to each device for nightly deduplication, zstd compression, and retention pruning.The script was tested and successfully performed first-run backups. Scheduling is accomplished with systemd managed automation on all machines. </p>
+<p>On each host, a <code>/etc/systemd/system/borg-backup@.service</code> and <code>/etc/systemd/system/borg-backup@&lt;hostname&gt;.timer</code> were created.
+A secure passphrase was passed to root and is handled by <code>BORG_PASSPHRASE_FILE</code> usage inside the systemd unit. 
+Once the passphrase was verified, deduplication and successful pruning via Borg retention policies were tested with a manual start of the service. Backups now run nightly without user interaction.</p>
+<p><i>borg-backup@.service</i>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=Borg Backup for %i
+Documentation=https://borgbackup.readthedocs.io/
+Wants=network-online.target
+After=network-online.target
+
+# Ensure NFS backup target is available
+RequiresMountsFor=/mnt/unas
+
+[Service]
+Type=oneshot
+Nice=10
+
+# Passphrase from root-only file
+Environment=BORG_PASSPHRASE_FILE=/root/.borg_passphrase
+
+ExecStart=/bin/bash -c &#39;export BORG_PASSPHRASE=$(cat &quot;$BORG_PASSPHRASE_FILE&quot;) ; /usr/local/sbin/backup_%i.sh&#39;
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div></p>
+<p>In the runbook, two restore scenarios are documented. Scenario A, in which the disk/partitions are intact, a full Borg restore via Live USB without OS reinstall. And, Scenario B, full disaster recovery, in which we take a new/blank disk, give it a minimal OS install to create partitions, and the Borg restore.</p>
+<p>The backups now run silently overnight. To track and verify the activity on each host, a <a href="https://grafana.com/" target="_blank">Grafana</a> dashboard was built using data piped from Borg to <a href="https://prometheus.io/" target="_blank">Prometheus</a>.<br />
+To accomplish this, I installed and configured node_exporter on all hosts and implemented textfile collector metrics for Borg. On each host, <code>.prom</code> files were added to /var/lib/node_exporter, and scraping and metric availability was confirmed through Prometheus. 
+The data in Prometheus was imported to Grafana for individual host dashboard visualizations with the last backup exit code rendered as Backup Successful, hours since last backup, last backup duration, and deduplicated data added.</p>
+<figure style="text-align:center;">
+<p><img alt="Lyra Backups" src="../../images/lyra_backup.jpg" width="42%" /></p>
+<figcaption><em>The proto interface of Lyra's backup dashboard</em></figcaption>
+</figure>
+<h2 id="observations">Observations<a class="headerlink" href="#observations" title="Permanent link">&para;</a></h2>
+<p>Deduplication was extremely effective across hosts; actual storage impact on the NAS is minimal after compression. NFS performance was stable and fast enough for large snapshot ingestion. The backup scripts executed cleanly with predictable runtime. Lyra’s was the longest at ~48 minutes for the initial backup. Subsequent incremental backups have been very fast. Borg’s repository integrity and list operations confirmed correct initialization and keying. The Disaster Recovery process is now logically complete, with a regular integrity verification process still needed.
+Overnight the timer automation was confirmed successful and the dashboard provides real time information</p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>I'll need to add another backup schedule once the TTS node is online. </p>
+<p>Implement a periodic automated Borg repo health check <code>borg check</code> with email notification. </p>
+<p>Put together a vm for a full test restore to validate backup functionality. </p>
+<p>Add timestamp data to the dashboard, and make the dashboard data a little nicer looking</p>
+<p>Add backup failure alerting</p>
+<p>Start work on centralized logging</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2720,14 +2606,14 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../../js/mermaid-init.js"></script>
+        <script src="../../js/mermaid-init.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -2735,7 +2621,7 @@
       
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
       
-        <script src="../../../js/mc-sim.js"></script>
+        <script src="../../js/mc-sim.js"></script>
       
     
   </body>

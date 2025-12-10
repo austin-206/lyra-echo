@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://austin-206.github.io/lyra-echo/docs/policies/ai-policy/sensor-perception/">
+        <link rel="canonical" href="https://austin-206.github.io/lyra-echo/docs/ops/temp/recovery/">
       
       
-        <link rel="prev" href="../constitution/">
-      
-      
-        <link rel="next" href="../autonomy-action/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Sensor & Perception Policy - Lyra/Echo</title>
+        <title>Disaster Recovery Runbook (Lyra / Deb / MirrorPi / Raspi) - Lyra/Echo</title>
       
     
     
@@ -70,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sensor-perception-policy" class="md-skip">
+        <a href="#disaster-recovery-runbook-lyra-deb-mirrorpi-raspi" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sensor & Perception Policy
+              Disaster Recovery Runbook (Lyra / Deb / MirrorPi / Raspi)
             
           </span>
         </div>
@@ -388,20 +384,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -417,7 +411,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Governance
@@ -545,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../model-lifecycle/" class="md-nav__link">
+      <a href="../../../policies/model-lifecycle/" class="md-nav__link">
         
   
   
@@ -575,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prompt-and-agent/" class="md-nav__link">
+      <a href="../../../policies/prompt-and-agent/" class="md-nav__link">
         
   
   
@@ -605,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-privacy/" class="md-nav__link">
+      <a href="../../../policies/data-privacy/" class="md-nav__link">
         
   
   
@@ -635,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../access-control/" class="md-nav__link">
+      <a href="../../../policies/access-control/" class="md-nav__link">
         
   
   
@@ -665,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../incident-response/" class="md-nav__link">
+      <a href="../../../policies/incident-response/" class="md-nav__link">
         
   
   
@@ -695,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../audit-review/" class="md-nav__link">
+      <a href="../../../policies/audit-review/" class="md-nav__link">
         
   
   
@@ -725,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../change-management/" class="md-nav__link">
+      <a href="../../../policies/change-management/" class="md-nav__link">
         
   
   
@@ -755,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ethical-use/" class="md-nav__link">
+      <a href="../../../policies/ethical-use/" class="md-nav__link">
         
   
   
@@ -785,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../power-continuity/" class="md-nav__link">
+      <a href="../../../policies/power-continuity/" class="md-nav__link">
         
   
   
@@ -815,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/" class="md-nav__link">
+      <a href="../../../policies/documentation/" class="md-nav__link">
         
   
   
@@ -850,20 +844,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -879,7 +871,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             AI Policies
@@ -893,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../constitution/" class="md-nav__link">
+      <a href="../../../policies/ai-policy/constitution/" class="md-nav__link">
         
   
   
@@ -920,39 +912,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Sensor & Perception
-    
-  </span>
-  
-    
-  
-  
-    <span class="md-status md-status--stable"></span>
-  
-
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../policies/ai-policy/sensor-perception/" class="md-nav__link">
         
   
   
@@ -970,98 +933,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Purpose
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-allowed-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Allowed Sensors
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-allowed-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Allowed Locations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-allowed-data-collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Allowed Data Collection
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-prohibited-inferences" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Prohibited Inferences
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-retention-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Retention Rules
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-consent" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Consent
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-enforcement" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Enforcement
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1074,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autonomy-action/" class="md-nav__link">
+      <a href="../../../policies/ai-policy/autonomy-action/" class="md-nav__link">
         
   
   
@@ -1104,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../emotional-interaction/" class="md-nav__link">
+      <a href="../../../policies/ai-policy/emotional-interaction/" class="md-nav__link">
         
   
   
@@ -1134,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environmental-impact/" class="md-nav__link">
+      <a href="../../../policies/ai-policy/environmental-impact/" class="md-nav__link">
         
   
   
@@ -1164,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../trainingdata-ethics/" class="md-nav__link">
+      <a href="../../../policies/ai-policy/trainingdata-ethics/" class="md-nav__link">
         
   
   
@@ -1194,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autonomous-learning/" class="md-nav__link">
+      <a href="../../../policies/ai-policy/autonomous-learning/" class="md-nav__link">
         
   
   
@@ -1345,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ops/runbooks/" class="md-nav__link">
+      <a href="../../runbooks/" class="md-nav__link">
         
   
   
@@ -1368,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ops/backup.md" class="md-nav__link">
+      <a href="../../backup.md" class="md-nav__link">
         
   
   
@@ -1391,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ops/recovery.md" class="md-nav__link">
+      <a href="../../recovery.md" class="md-nav__link">
         
   
   
@@ -1422,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ops/maintenance/" class="md-nav__link">
+      <a href="../../maintenance/" class="md-nav__link">
         
   
   
@@ -1445,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ops/monitoring/" class="md-nav__link">
+      <a href="../../monitoring/" class="md-nav__link">
         
   
   
@@ -2499,72 +2370,402 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-purpose" class="md-nav__link">
+  <a href="#1-repositories-and-hosts" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Purpose
+      1. Repositories and Hosts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-allowed-sensors" class="md-nav__link">
+  <a href="#2-restore-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Allowed Sensors
+      2. Restore Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Restore Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-scenario-a-disk-and-partitions-intact-preferred" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Scenario A — Disk and Partitions Intact (Preferred)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-scenario-b-disk-new-replaced-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Scenario B — Disk New / Replaced / Empty
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-common-requirements-for-both-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Common Requirements for Both Scenarios
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-allowed-locations" class="md-nav__link">
+  <a href="#4-scenario-a-restore-with-existing-disk-lyra-example" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Allowed Locations
+      4. Scenario A — Restore with Existing Disk (Lyra Example)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Scenario A — Restore with Existing Disk (Lyra Example)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-boot-from-live-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Boot from Live USB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-identify-lyras-partitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Identify Lyra’s Partitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-mount-lyras-root-and-efi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Mount Lyra’s Root and EFI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-mount-sulafats-nfs-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Mount Sulafat’s NFS Export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-install-borg-in-the-live-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Install Borg in the Live Environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-select-an-archive-to-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Select an Archive to Restore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-restore-the-filesystem-into-mnttarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Restore the Filesystem into /mnt/target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-prepare-for-chroot-and-reinstall-grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Prepare for chroot and Reinstall GRUB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-clean-up-and-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9 Clean Up and Reboot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-scenario-b-restore-to-a-new-blank-disk-lyra-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Scenario B — Restore to a New / Blank Disk (Lyra Example)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Scenario B — Restore to a New / Blank Disk (Lyra Example)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-minimal-os-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Minimal OS Install
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-install-nfs-and-borg-on-the-fresh-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Install NFS and Borg on the Fresh OS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-mount-the-root-filesystem-at-mnttarget-if-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Mount the Root Filesystem at /mnt/target (If Needed)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-deb-mirrorpi-and-raspi" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Deb, MirrorPi, and Raspi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Deb, MirrorPi, and Raspi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-deb-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Deb (Debian)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-mirrorpi-and-raspi-raspberry-pi-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 MirrorPi and Raspi (Raspberry Pi OS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-post-restore-tasks-per-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Post-Restore Tasks (Per Host)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Post-Restore Tasks (Per Host)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-lyra" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Lyra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-deb" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Deb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-mirrorpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 MirrorPi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-raspi" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Raspi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-verification-checklist-all-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Verification Checklist (All Hosts)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Verification Checklist (All Hosts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      System-Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data-Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application-Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup-Level
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-testing-a-restore-non-destructive" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Testing a Restore (Non-Destructive)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-allowed-data-collection" class="md-nav__link">
+  <a href="#10-failure-modes-and-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Allowed Data Collection
+      10. Failure Modes and Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Failure Modes and Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-key-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      “Repository key mismatch”
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-prohibited-inferences" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#incorrect-passphrase" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Prohibited Inferences
+      “Incorrect passphrase”
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6-retention-rules" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#nfs-access-denied" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Retention Rules
+      “NFS access denied”
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#7-consent" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#system-fails-to-boot-after-restore" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Consent
+      “System fails to boot after restore”
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#filesystem-full" class="md-nav__link">
+    <span class="md-ellipsis">
+      “Filesystem full”
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#8-enforcement" class="md-nav__link">
+  <a href="#11-conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Enforcement
+      11. Conclusion
     </span>
   </a>
   
@@ -2586,84 +2787,411 @@
 
 
 
-<h1 id="sensor-perception-policy">Sensor &amp; Perception Policy<a class="headerlink" href="#sensor-perception-policy" title="Permanent link">&para;</a></h1>
-<p><strong>Effective Date:</strong> 2025-11-16<br />
-<strong>Next Review:</strong> 2026-11-16<br />
-<strong>Issued under:</strong> Lyra/Echo Governance Framework v1.0</p>
-<h2 id="1-purpose">1. Purpose<a class="headerlink" href="#1-purpose" title="Permanent link">&para;</a></h2>
-<p>Ensure all sensory systems (mic, camera, mmWave, presence, IoT sensors) are used ethically, minimally, and with explicit consent.</p>
-<h2 id="2-allowed-sensors">2. Allowed Sensors<a class="headerlink" href="#2-allowed-sensors" title="Permanent link">&para;</a></h2>
+<h1 id="disaster-recovery-runbook-lyra-deb-mirrorpi-raspi">Disaster Recovery Runbook (Lyra / Deb / MirrorPi / Raspi)<a class="headerlink" href="#disaster-recovery-runbook-lyra-deb-mirrorpi-raspi" title="Permanent link">&para;</a></h1>
+<p>This runbook documents the <strong>end-to-end restoration procedure</strong> for any host in the the Lyra–Sulafat constellation using BorgBackup.</p>
+<p>It is designed for real emergencies:</p>
 <ul>
-<li>Microphones  </li>
-<li>Cameras (PiCam or USB)  </li>
-<li>mmWave presence sensors  </li>
-<li>Environmental sensors (temp/humidity)  </li>
-<li>GPIO-based triggers  </li>
+<li>Disk failure</li>
+<li>OS corruption</li>
+<li>Misconfiguration</li>
+<li>Accidental deletion</li>
+<li>Compromise requiring full rollback</li>
 </ul>
-<p>All new sensors require Maintainer + Security Reviewer approval.</p>
-<h2 id="3-allowed-locations">3. Allowed Locations<a class="headerlink" href="#3-allowed-locations" title="Permanent link">&para;</a></h2>
-<p>Sensors may be placed only:</p>
+<p>Borg repositories are stored on <strong>Sulafat (10.0.0.74)</strong> in NFS export directories mounted at:</p>
+<div class="highlight"><pre><span></span><code>/mnt/unas/&lt;hostname&gt;
+</code></pre></div>
+<p>You must have:</p>
 <ul>
-<li>in common areas  </li>
-<li>near the mirror assembly  </li>
-<li>in designated automation nodes  </li>
+<li>The encrypted Borg repository on Sulafat</li>
+<li>The exported Borg key for the affected host</li>
+<li>The Borg passphrase</li>
 </ul>
-<p>Prohibited:</p>
-<ul>
-<li>bathrooms  </li>
-<li>bedrooms (unless explicitly approved)  </li>
-<li>private areas without universal consent  </li>
-</ul>
-<h2 id="4-allowed-data-collection">4. Allowed Data Collection<a class="headerlink" href="#4-allowed-data-collection" title="Permanent link">&para;</a></h2>
-<p>Sensors may collect:</p>
-<ul>
-<li>audio for STT  </li>
-<li>video frames for recognition  </li>
-<li>presence signals  </li>
-<li>environmental data  </li>
-</ul>
-<p>They may <strong>not</strong> collect:</p>
-<ul>
-<li>behavioral movement patterns  </li>
-<li>emotional tone  </li>
-<li>gait or micro-expressions  </li>
-<li>background conversations  </li>
-</ul>
-<h2 id="5-prohibited-inferences">5. Prohibited Inferences<a class="headerlink" href="#5-prohibited-inferences" title="Permanent link">&para;</a></h2>
-<p>Lyra must not infer:</p>
-<ul>
-<li>emotions  </li>
-<li>psychological states  </li>
-<li>interpersonal dynamics  </li>
-<li>stress or anxiety  </li>
-<li>health conditions  </li>
-<li>behavioral habits  </li>
-</ul>
-<h2 id="6-retention-rules">6. Retention Rules<a class="headerlink" href="#6-retention-rules" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Raw sensory data stays in RAM only.  </li>
-<li>Deleted immediately after processing.  </li>
-<li>No raw sensor data may be saved, embedded, or logged.</li>
-</ul>
-<h2 id="7-consent">7. Consent<a class="headerlink" href="#7-consent" title="Permanent link">&para;</a></h2>
-<p>Presence, audio, and camera inputs require:</p>
-<ul>
-<li>informed consent for all residents  </li>
-<li>explicit user opt-in for extended monitoring  </li>
-</ul>
-<p>Modes involving continuous sensing must display active-state indicators.</p>
-<h2 id="8-enforcement">8. Enforcement<a class="headerlink" href="#8-enforcement" title="Permanent link">&para;</a></h2>
-<p>Unauthorized sensor use or retention is a Critical incident.</p>
+<p>Without those, recovery may not be possible.</p>
 <hr />
+<h2 id="1-repositories-and-hosts">1. Repositories and Hosts<a class="headerlink" href="#1-repositories-and-hosts" title="Permanent link">&para;</a></h2>
+<p>Each host has a corresponding repository on Sulafat:</p>
+<table>
+<thead>
+<tr>
+<th>Host</th>
+<th>Repository path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lyra</td>
+<td><code>/mnt/unas/lyra</code></td>
+</tr>
+<tr>
+<td>Deb</td>
+<td><code>/mnt/unas/deb</code></td>
+</tr>
+<tr>
+<td>MirrorPi</td>
+<td><code>/mnt/unas/mirrorpi</code></td>
+</tr>
+<tr>
+<td>Raspi</td>
+<td><code>/mnt/unas/raspi</code></td>
+</tr>
+</tbody>
+</table>
+<p>The backup runbooks for each host (e.g., <code>backups/lyra.md</code>) describe how these repos are populated.</p>
+<hr />
+<h2 id="2-restore-scenarios">2. Restore Scenarios<a class="headerlink" href="#2-restore-scenarios" title="Permanent link">&para;</a></h2>
+<p>There are <strong>two</strong> main restore scenarios. The steps differ depending on the state of the target disk.</p>
+<h3 id="21-scenario-a-disk-and-partitions-intact-preferred">2.1 Scenario A — Disk and Partitions Intact (Preferred)<a class="headerlink" href="#21-scenario-a-disk-and-partitions-intact-preferred" title="Permanent link">&para;</a></h3>
+<p>Use this when:</p>
+<ul>
+<li>The host’s disk and partition layout still exist</li>
+<li>The root filesystem is present but the OS is broken, corrupted, or compromised</li>
+<li>You want to fully roll back to a previous state</li>
+</ul>
+<p>In this case, you <strong>do not reinstall the OS</strong>.<br />
+You boot from external media, mount the existing partitions, and restore onto them.</p>
+<h3 id="22-scenario-b-disk-new-replaced-empty">2.2 Scenario B — Disk New / Replaced / Empty<a class="headerlink" href="#22-scenario-b-disk-new-replaced-empty" title="Permanent link">&para;</a></h3>
+<p>Use this when:</p>
+<ul>
+<li>The host’s disk has been replaced</li>
+<li>The partition table is gone</li>
+<li>There is no filesystem for Borg to restore into</li>
+</ul>
+<p>In this case, you <strong>perform a minimal OS install first</strong> to recreate:</p>
+<ul>
+<li>The partition table</li>
+<li>The EFI/boot partition (if applicable)</li>
+<li>The root filesystem</li>
+</ul>
+<p>Then, you <strong>overwrite that fresh install</strong> with the Borg restore.</p>
+<hr />
+<h2 id="3-common-requirements-for-both-scenarios">3. Common Requirements for Both Scenarios<a class="headerlink" href="#3-common-requirements-for-both-scenarios" title="Permanent link">&para;</a></h2>
+<p>Regardless of scenario:</p>
+<ol>
+<li><strong>Network access to Sulafat</strong> (<code>10.0.0.74</code>)</li>
+<li>Ability to mount the NFS export:
+   <div class="highlight"><pre><span></span><code>/mnt/unas
+</code></pre></div></li>
+<li>BorgBackup installed on the environment you are using to restore</li>
+<li>Borg key and passphrase available</li>
+</ol>
+<p>NFS export (conceptual):</p>
+<div class="highlight"><pre><span></span><code>10.0.0.74:/volume/&lt;uuid&gt;/.srv/.unifi-drive/Storage/.data  →  /mnt/unas
+</code></pre></div>
+<p>Inside <code>/mnt/unas</code>, each host’s Borg repo lives in its own subdirectory.</p>
+<hr />
+<h2 id="4-scenario-a-restore-with-existing-disk-lyra-example">4. Scenario A — Restore with Existing Disk (Lyra Example)<a class="headerlink" href="#4-scenario-a-restore-with-existing-disk-lyra-example" title="Permanent link">&para;</a></h2>
+<p>This is the <strong>preferred method</strong> when the disk is intact.</p>
+<p>We’ll use <strong>Lyra</strong> as the example; Deb and others are analogous with different device names.</p>
+<h3 id="41-boot-from-live-usb">4.1 Boot from Live USB<a class="headerlink" href="#41-boot-from-live-usb" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Insert an Ubuntu Live USB.</li>
+<li>Boot Lyra and choose <strong>“Try Ubuntu”</strong> (do not install).</li>
+</ol>
+<p>You are now in a temporary OS running from USB/RAM.</p>
+<hr />
+<h3 id="42-identify-lyras-partitions">4.2 Identify Lyra’s Partitions<a class="headerlink" href="#42-identify-lyras-partitions" title="Permanent link">&para;</a></h3>
+<p>Open a terminal and run:</p>
+<div class="highlight"><pre><span></span><code>lsblk<span class="w"> </span>-f
+</code></pre></div>
+<p>Find:</p>
+<ul>
+<li>Root partition (e.g., <code>/dev/nvme0n1p2</code>, type <code>ext4</code>)</li>
+<li>EFI partition (e.g., <code>/dev/nvme0n1p1</code>, type <code>vfat</code>)</li>
+</ul>
+<hr />
+<h3 id="43-mount-lyras-root-and-efi">4.3 Mount Lyra’s Root and EFI<a class="headerlink" href="#43-mount-lyras-root-and-efi" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/target
+sudo<span class="w"> </span>mount<span class="w"> </span>/dev/nvme0n1p2<span class="w"> </span>/mnt/target
+
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/target/boot/efi
+sudo<span class="w"> </span>mount<span class="w"> </span>/dev/nvme0n1p1<span class="w"> </span>/mnt/target/boot/efi
+</code></pre></div>
+<p>Now <code>/mnt/target</code> is Lyra’s future <code>/</code>.</p>
+<hr />
+<h3 id="44-mount-sulafats-nfs-export">4.4 Mount Sulafat’s NFS Export<a class="headerlink" href="#44-mount-sulafats-nfs-export" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/unas
+sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>nfs<span class="w"> </span><span class="m">10</span>.0.0.74:/volume/&lt;uuid&gt;/.srv/.unifi-drive/Storage/.data<span class="w"> </span>/mnt/unas
+</code></pre></div>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code>df<span class="w"> </span>-hT<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>unas
+ls<span class="w"> </span>/mnt/unas
+</code></pre></div>
+<p>You should see <code>lyra</code>, <code>deb</code>, <code>mirrorpi</code>, <code>raspi</code>, etc.</p>
+<hr />
+<h3 id="45-install-borg-in-the-live-environment">4.5 Install Borg in the Live Environment<a class="headerlink" href="#45-install-borg-in-the-live-environment" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>borgbackup
+borg<span class="w"> </span>--version
+</code></pre></div>
+<hr />
+<h3 id="46-select-an-archive-to-restore">4.6 Select an Archive to Restore<a class="headerlink" href="#46-select-an-archive-to-restore" title="Permanent link">&para;</a></h3>
+<p>List Lyra’s archives:</p>
+<div class="highlight"><pre><span></span><code>borg<span class="w"> </span>list<span class="w"> </span>/mnt/unas/lyra
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>lyra-2025-12-07_13-50-40   Sun, 2025-12-07 13:50:43
+lyra-2025-12-08_03-30-00   Mon, 2025-12-08 03:30:00
+...
+</code></pre></div>
+<p>Choose an appropriate snapshot (usually the most recent known-good).</p>
+<hr />
+<h3 id="47-restore-the-filesystem-into-mnttarget">4.7 Restore the Filesystem into <code>/mnt/target</code><a class="headerlink" href="#47-restore-the-filesystem-into-mnttarget" title="Permanent link">&para;</a></h3>
+<p>From the live environment:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>borg<span class="w"> </span>extract<span class="w"> </span>/mnt/unas/lyra::lyra-2025-12-07_13-50-40<span class="w"> </span>--target<span class="w"> </span>/mnt/target
+</code></pre></div>
+<p>Or, if using older Borg syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/mnt/target
+sudo<span class="w"> </span>borg<span class="w"> </span>extract<span class="w"> </span>/mnt/unas/lyra::lyra-2025-12-07_13-50-40
+</code></pre></div>
+<p>This reconstructs the <strong>entire OS</strong> onto Lyra’s root partition.</p>
+<hr />
+<h3 id="48-prepare-for-chroot-and-reinstall-grub">4.8 Prepare for chroot and Reinstall GRUB<a class="headerlink" href="#48-prepare-for-chroot-and-reinstall-grub" title="Permanent link">&para;</a></h3>
+<p>Bind-mount essential system directories:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mount<span class="w"> </span>--bind<span class="w"> </span>/dev<span class="w"> </span>/mnt/target/dev
+sudo<span class="w"> </span>mount<span class="w"> </span>--bind<span class="w"> </span>/proc<span class="w"> </span>/mnt/target/proc
+sudo<span class="w"> </span>mount<span class="w"> </span>--bind<span class="w"> </span>/sys<span class="w"> </span>/mnt/target/sys
+</code></pre></div>
+<p>Chroot into the restored system:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chroot<span class="w"> </span>/mnt/target
+</code></pre></div>
+<p>Install GRUB to the disk:</p>
+<div class="highlight"><pre><span></span><code>grub-install<span class="w"> </span>/dev/nvme0n1
+update-grub
+</code></pre></div>
+<p>Exit chroot:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div>
+<hr />
+<h3 id="49-clean-up-and-reboot">4.9 Clean Up and Reboot<a class="headerlink" href="#49-clean-up-and-reboot" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>umount<span class="w"> </span>-R<span class="w"> </span>/mnt/target
+sudo<span class="w"> </span>umount<span class="w"> </span>/mnt/unas
+sudo<span class="w"> </span>reboot
+</code></pre></div>
+<p>Remove the USB when prompted or after shutdown.</p>
+<p>Lyra should now boot into the <strong>restored OS</strong> corresponding to the chosen archive.</p>
+<hr />
+<h2 id="5-scenario-b-restore-to-a-new-blank-disk-lyra-example">5. Scenario B — Restore to a New / Blank Disk (Lyra Example)<a class="headerlink" href="#5-scenario-b-restore-to-a-new-blank-disk-lyra-example" title="Permanent link">&para;</a></h2>
+<p>Use this when:</p>
+<ul>
+<li>Lyra’s disk has been replaced</li>
+<li>There are no partitions or filesystems</li>
+</ul>
+<p>This scenario uses the OS installer <strong>only</strong> to create partitions and a minimal system, which is then overwritten by Borg.</p>
+<h3 id="51-minimal-os-install">5.1 Minimal OS Install<a class="headerlink" href="#51-minimal-os-install" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Boot from the Ubuntu installer.</li>
+<li>Install Ubuntu to the new disk using a simple layout:</li>
+<li>EFI partition (e.g., <code>/dev/nvme0n1p1</code>)</li>
+<li>Root partition (e.g., <code>/dev/nvme0n1p2</code>)</li>
+<li>Create one admin user.</li>
+<li>Boot into this fresh system once to confirm it works.</li>
+</ol>
+<p>You now have:</p>
+<ul>
+<li>A valid GPT + EFI setup</li>
+<li>A bootable, minimal Ubuntu install</li>
+<li>A root filesystem to restore onto</li>
+</ul>
+<hr />
+<h3 id="52-install-nfs-and-borg-on-the-fresh-os">5.2 Install NFS and Borg on the Fresh OS<a class="headerlink" href="#52-install-nfs-and-borg-on-the-fresh-os" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nfs-common<span class="w"> </span>borgbackup
+</code></pre></div>
+<p>Create mountpoint:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/unas
+</code></pre></div>
+<p>Mount Sulafat:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>nfs<span class="w"> </span><span class="m">10</span>.0.0.74:/volume/&lt;uuid&gt;/.srv/.unifi-drive/Storage/.data<span class="w"> </span>/mnt/unas
+</code></pre></div>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>/mnt/unas/lyra
+</code></pre></div>
+<hr />
+<h3 id="53-mount-the-root-filesystem-at-mnttarget-if-needed">5.3 Mount the Root Filesystem at <code>/mnt/target</code> (If Needed)<a class="headerlink" href="#53-mount-the-root-filesystem-at-mnttarget-if-needed" title="Permanent link">&para;</a></h3>
+<p>If you are already running from the installed OS, the root filesystem is <code>/</code>.<br />
+For safety and clarity, you can still mount it via another live session, or simply use <code>/</code> as the restore target after booting from a Live USB as in Scenario A.</p>
+<p><strong>Safer approach:</strong><br />
+Reboot into a Live USB and follow Scenario A, since the partitions now exist.</p>
+<p>In that case, once partitions are there, <strong>continue with Scenario A</strong> starting from:</p>
+<ul>
+<li>“Identify Lyra’s Partitions”</li>
+<li>“Mount Root and EFI”</li>
+<li>“Mount Sulafat”</li>
+<li>“Install Borg”</li>
+<li>“Restore with <code>borg extract</code>”</li>
+<li>“Reinstall GRUB”</li>
+</ul>
+<p>The key difference for Scenario B is just <strong>how the disk and partitions were created</strong> (via installer), not how Borg is used.</p>
+<hr />
+<h2 id="6-deb-mirrorpi-and-raspi">6. Deb, MirrorPi, and Raspi<a class="headerlink" href="#6-deb-mirrorpi-and-raspi" title="Permanent link">&para;</a></h2>
+<p>The same two scenarios apply to Deb, MirrorPi, and Raspi, with different device names and OSes.</p>
+<h3 id="61-deb-debian">6.1 Deb (Debian)<a class="headerlink" href="#61-deb-debian" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Boot medium: Debian live ISO or installer (rescue mode)</li>
+<li>Root device: typically <code>/dev/nvme0n1p2</code></li>
+<li>EFI: <code>/dev/nvme0n1p1</code></li>
+<li>Repo: <code>/mnt/unas/deb</code></li>
+</ul>
+<p>The restore steps are the same as Lyra, substituting:</p>
+<ul>
+<li>Partition names</li>
+<li>Repository path (<code>/mnt/unas/deb</code>)</li>
+<li>GRUB install target (e.g., <code>/dev/nvme0n1</code>)</li>
+</ul>
+<h3 id="62-mirrorpi-and-raspi-raspberry-pi-os">6.2 MirrorPi and Raspi (Raspberry Pi OS)<a class="headerlink" href="#62-mirrorpi-and-raspi-raspberry-pi-os" title="Permanent link">&para;</a></h3>
+<p>Raspberry Pi hardware typically boots from:</p>
+<ul>
+<li>microSD, or</li>
+<li>NVMe/USB with Pi firmware</li>
+</ul>
+<p>For Pi-based hosts:</p>
+<ul>
+<li>Boot medium: Raspberry Pi OS imager or Pi OS live image</li>
+<li>Restore is usually <strong>Scenario B style</strong>:</li>
+<li>Flash Pi OS to disk</li>
+<li>Boot Pi OS</li>
+<li>Install <code>nfs-common</code> and <code>borgbackup</code></li>
+<li>Mount <code>/mnt/unas</code></li>
+<li>Use Borg to restore onto the root filesystem (either in-place or via chroot if using an external host)</li>
+</ul>
+<p>Pi boot does not use GRUB; the Pi firmware loads the kernel directly from <code>/boot</code>.<br />
+If boot issues occur after restore, re-flashing <code>/boot</code> from a known-good Pi OS image and then restoring everything except <code>/boot</code> can be a practical compromise.</p>
+<hr />
+<h2 id="7-post-restore-tasks-per-host">7. Post-Restore Tasks (Per Host)<a class="headerlink" href="#7-post-restore-tasks-per-host" title="Permanent link">&para;</a></h2>
+<p>After any full restore, perform host-specific checks.</p>
+<h3 id="71-lyra">7.1 Lyra<a class="headerlink" href="#71-lyra" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verify <code>/mnt/data1</code> and <code>/mnt/data2</code> mount correctly.</li>
+<li>Reinstall or resync:</li>
+<li>Model weights (Ollama, vLLM, Parler-TTS, etc.)</li>
+<li>Containers that were intentionally excluded from backups.</li>
+<li>Confirm gateway, Qdrant, and any orchestration services start.</li>
+<li>Verify hostname and network configuration.</li>
+</ul>
+<h3 id="72-deb">7.2 Deb<a class="headerlink" href="#72-deb" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Confirm <code>/mnt/sec-onion</code> mounts.</li>
+<li>Verify Docker / Podman stacks:</li>
+<li>Nextcloud</li>
+<li>Postgres</li>
+<li>MQTT</li>
+<li>Node-RED</li>
+<li>Security Onion / other services</li>
+<li>Rebuild large images that were excluded.</li>
+</ul>
+<h3 id="73-mirrorpi">7.3 MirrorPi<a class="headerlink" href="#73-mirrorpi" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verify MagicMirror starts.</li>
+<li>Confirm Lyra/Echo chat interface is reachable.</li>
+<li>Check presence sensor integrations and any local services.</li>
+</ul>
+<h3 id="74-raspi">7.4 Raspi<a class="headerlink" href="#74-raspi" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Confirm Pi-hole / DNS / DHCP are functioning.</li>
+<li>Verify network services (static leases, upstream DNS).</li>
+<li>Validate that other hosts can resolve names and reach the internet as expected.</li>
+</ul>
+<hr />
+<h2 id="8-verification-checklist-all-hosts">8. Verification Checklist (All Hosts)<a class="headerlink" href="#8-verification-checklist-all-hosts" title="Permanent link">&para;</a></h2>
+<p>After a restore:</p>
+<h3 id="system-level">System-Level<a class="headerlink" href="#system-level" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Host boots successfully from internal storage</li>
+<li>[ ] Hostname is correct</li>
+<li>[ ] Network connectivity to LAN and Sulafat</li>
+</ul>
+<h3 id="data-level">Data-Level<a class="headerlink" href="#data-level" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] All expected mountpoints present (<code>/mnt/data1</code>, <code>/mnt/data2</code>, <code>/mnt/sec-onion</code>, etc.)</li>
+<li>[ ] Filesystems have expected size and usage</li>
+</ul>
+<h3 id="application-level">Application-Level<a class="headerlink" href="#application-level" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Core services started (per host)</li>
+<li>[ ] Lyra gateway responds and can answer queries</li>
+<li>[ ] Mirror UI loads and reacts to presence</li>
+<li>[ ] Raspi resolves DNS correctly for other devices</li>
+</ul>
+<h3 id="backup-level">Backup-Level<a class="headerlink" href="#backup-level" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] NFS mount to <code>/mnt/unas</code> restored in <code>/etc/fstab</code></li>
+<li>[ ] <code>borg list /mnt/unas/&lt;host&gt;</code> works</li>
+<li>[ ] Nightly backup cron jobs present</li>
+<li>[ ] Borg key and passphrase stored safely off-host</li>
+</ul>
+<hr />
+<h2 id="9-testing-a-restore-non-destructive">9. Testing a Restore (Non-Destructive)<a class="headerlink" href="#9-testing-a-restore-non-destructive" title="Permanent link">&para;</a></h2>
+<p>At least periodically, perform a dry-run restore test on non-production hardware:</p>
+<ol>
+<li>Spin up a VM or attach a spare disk.</li>
+<li>Create minimal partitions and install a base OS (if using Scenario B).</li>
+<li>Mount Sulafat.</li>
+<li>Install Borg.</li>
+<li>Restore an archive for one host into that environment.</li>
+<li>Attempt to boot it (if bare-metal) or inspect files (if VM).</li>
+<li>Validate critical configs and data exist.</li>
+</ol>
+<p>This proves the backups are usable and the runbook is accurate.</p>
+<hr />
+<h2 id="10-failure-modes-and-responses">10. Failure Modes and Responses<a class="headerlink" href="#10-failure-modes-and-responses" title="Permanent link">&para;</a></h2>
+<h3 id="repository-key-mismatch">“Repository key mismatch”<a class="headerlink" href="#repository-key-mismatch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The wrong Borg key file is being used, or the repo is not the one you think it is.</li>
+<li>Re-check that the correct repo path and key file are used.</li>
+<li>Re-import key if necessary:
+  <div class="highlight"><pre><span></span><code>borg<span class="w"> </span>key<span class="w"> </span>import<span class="w"> </span>/mnt/unas/&lt;host&gt;<span class="w"> </span>&lt;keyfile&gt;
+</code></pre></div></li>
+</ul>
+<h3 id="incorrect-passphrase">“Incorrect passphrase”<a class="headerlink" href="#incorrect-passphrase" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The passphrase is required; there is no bypass.</li>
+<li>Check password manager or stored records.</li>
+</ul>
+<h3 id="nfs-access-denied">“NFS access denied”<a class="headerlink" href="#nfs-access-denied" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sulafat NFS export does not permit this host’s IP.</li>
+<li>Update NFS client list / permissions on Sulafat GUI for:</li>
+<li>Lyra</li>
+<li>Deb</li>
+<li>MirrorPi</li>
+<li>Raspi</li>
+<li>Retry the mount.</li>
+</ul>
+<h3 id="system-fails-to-boot-after-restore">“System fails to boot after restore”<a class="headerlink" href="#system-fails-to-boot-after-restore" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Re-check:</li>
+<li>GRUB install target (<code>/dev/nvme0n1</code>, not a partition)</li>
+<li>EFI partition mounted correctly during chroot</li>
+<li><code>update-grub</code> output for correct root UUID</li>
+<li>For Pi: ensure <code>/boot</code> partition has valid firmware + kernel.</li>
+</ul>
+<h3 id="filesystem-full">“Filesystem full”<a class="headerlink" href="#filesystem-full" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The target disk must be at least as large as the original, or Borg may not be able to fully restore.</li>
+<li>Resize or choose a larger disk.</li>
+</ul>
+<hr />
+<h2 id="11-conclusion">11. Conclusion<a class="headerlink" href="#11-conclusion" title="Permanent link">&para;</a></h2>
+<p>This runbook provides a <strong>complete, scenario-based workflow</strong> for restoring:</p>
+<ul>
+<li>Lyra</li>
+<li>Deb</li>
+<li>MirrorPi</li>
+<li>Raspi</li>
+</ul>
+<p>from Borg backups stored on Sulafat.</p>
+<p>Use:</p>
+<ul>
+<li><strong>Scenario A</strong> when the disk and partitions exist (preferred, simpler).</li>
+<li><strong>Scenario B</strong> when the disk is new or has been wiped (installer used only to bootstrap partitions and bootloader).</li>
+</ul>
+<p>For host-specific backup configuration, see the corresponding <code>backups/&lt;host&gt;.md</code> documents.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
