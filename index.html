@@ -209,6 +209,26 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--evolving"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -227,6 +247,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Intent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyra-the-core-ai-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyra: The Core AI Host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echo-the-mirror-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Echo: The Mirror Node
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-centered-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance-Centered Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-navigate-this-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Navigate This Documentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2382,6 +2490,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Intent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyra-the-core-ai-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyra: The Core AI Host
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echo-the-mirror-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Echo: The Mirror Node
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-centered-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance-Centered Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-navigate-this-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Navigate This Documentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2400,7 +2585,7 @@
 <p>Lyra/Echo is an AI platform designed to operate inside the home without cloud dependence. It is a full AI architecture combining language models with a strict control layer, persistent memory, sensors, and orchestration.</p>
 <p>This site documents the design and implementation path of the system as it evolves from blueprint to operational environment.</p>
 <hr />
-<h1 id="project-intent">Project Intent<a class="headerlink" href="#project-intent" title="Permanent link">&para;</a></h1>
+<h2 id="project-intent">Project Intent<a class="headerlink" href="#project-intent" title="Permanent link">&para;</a></h2>
 <p>Lyra/Echo explores a future where AI in the home is:</p>
 <ul>
 <li><strong>private</strong> (all inference and storage occur locally)</li>
@@ -2412,33 +2597,19 @@
 </ul>
 <p>The goal is a system that delivers useful functionality while keeping all data and computation local to the home environment.</p>
 <hr />
-<h1 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h1>
+<h2 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
 <p>Lyra/Echo consists of two primary components:</p>
 <h3 id="lyra-the-core-ai-host"><strong>Lyra: The Core AI Host</strong><a class="headerlink" href="#lyra-the-core-ai-host" title="Permanent link">&para;</a></h3>
-<p>A GPU workstation responsible for:</p>
-<ul>
-<li>local LLM inference  </li>
-<li>STT ↔ LLM ↔ TTS pipelines  </li>
-<li>orchestration and agent logic  </li>
-<li>vector memory (Qdrant database)  </li>
-<li>safety and governance enforcement  </li>
-</ul>
+<p>A GPU workstation responsible for local LLM inference, STT ↔ LLM ↔ TTS pipelines, orchestration and agent logic, vector memory (Qdrant database).  </p>
 <h3 id="echo-the-mirror-node"><strong>Echo: The Mirror Node</strong><a class="headerlink" href="#echo-the-mirror-node" title="Permanent link">&para;</a></h3>
-<p>A Raspberry Pi based interface that manages:</p>
-<ul>
-<li>real-time voice interaction  </li>
-<li>dual-screen mirror UI  </li>
-<li>presence sensing and peripherals  </li>
-<li>environment cues for context  </li>
-<li>privacy-aware sensor processing  </li>
-</ul>
+<p>A Raspberry Pi based interface that manages, the mirror UI, real-time voice interaction, presence sensing and peripherals, environment cues, and sensor processing.  </p>
 <p>The two systems communicate through MQTT, REST, and structured event channels with strict access-control rules.</p>
 <hr />
-<h1 id="governance-centered-design">Governance-Centered Design<a class="headerlink" href="#governance-centered-design" title="Permanent link">&para;</a></h1>
+<h2 id="governance-centered-design">Governance-Centered Design<a class="headerlink" href="#governance-centered-design" title="Permanent link">&para;</a></h2>
 <p>Lyra/Echo is built with governance at the foundation. The system incorporates an AI Constitution defining non-negotiable behavioral boundaries and policies for memory ethics, sensor use, data retention, and autonomy. 
 Policy topics cover model-provenance and training-data requirements, energy-impact constraints, a full incident response framework for model misbehavior, and audits for drift, bias, and hallucination.</p>
 <hr />
-<h1 id="system-components">System Components<a class="headerlink" href="#system-components" title="Permanent link">&para;</a></h1>
+<h2 id="system-components">System Components<a class="headerlink" href="#system-components" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -2481,7 +2652,7 @@ Policy topics cover model-provenance and training-data requirements, energy-impa
 </tbody>
 </table>
 <hr />
-<h1 id="how-to-read-this-documentation">How to Read This Documentation<a class="headerlink" href="#how-to-read-this-documentation" title="Permanent link">&para;</a></h1>
+<h2 id="how-to-navigate-this-documentation">How to Navigate This Documentation<a class="headerlink" href="#how-to-navigate-this-documentation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Design Reference</strong> describes the system’s architecture and long-term roadmap  </li>
 <li><strong>Governance</strong> contains the full policy suite, safety framework, and a risk management program geared toward the use of generative intelligence</li>
