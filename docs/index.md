@@ -17,7 +17,7 @@ This site documents the design and implementation path of the system as it evolv
 
 ---
 
-# Project Intent
+## Project Intent
 
 Lyra/Echo explores a future where AI in the home is:
 
@@ -32,40 +32,28 @@ The goal is a system that delivers useful functionality while keeping all data a
 
 ---
 
-# Architecture Overview
+## Architecture Overview
 
 Lyra/Echo consists of two primary components:
 
 ### **Lyra: The Core AI Host**
-A GPU workstation responsible for:
-
-- local LLM inference  
-- STT ↔ LLM ↔ TTS pipelines  
-- orchestration and agent logic  
-- vector memory (Qdrant database)  
-- safety and governance enforcement  
-
+A GPU workstation responsible for local LLM inference, STT ↔ LLM ↔ TTS pipelines, orchestration and agent logic, vector memory (Qdrant database).  
+ 
 ### **Echo: The Mirror Node**
-A Raspberry Pi based interface that manages:
-
-- real-time voice interaction  
-- dual-screen mirror UI  
-- presence sensing and peripherals  
-- environment cues for context  
-- privacy-aware sensor processing  
+A Raspberry Pi based interface that manages, the mirror UI, real-time voice interaction, presence sensing and peripherals, environment cues, and sensor processing.  
 
 The two systems communicate through MQTT, REST, and structured event channels with strict access-control rules.
 
 ---
 
-# Governance-Centered Design
+## Governance-Centered Design
 
 Lyra/Echo is built with governance at the foundation. The system incorporates an AI Constitution defining non-negotiable behavioral boundaries and policies for memory ethics, sensor use, data retention, and autonomy. 
 Policy topics cover model-provenance and training-data requirements, energy-impact constraints, a full incident response framework for model misbehavior, and audits for drift, bias, and hallucination.
 
 ---
 
-# System Components
+## System Components
 
 | Layer | Function | Technologies |
 |-------|----------|--------------|
@@ -78,7 +66,7 @@ Policy topics cover model-provenance and training-data requirements, energy-impa
 
 ---
 
-# How to Read This Documentation
+## How to Navigate This Documentation
 
 - **Design Reference** describes the system’s architecture and long-term roadmap  
 - **Governance** contains the full policy suite, safety framework, and a risk management program geared toward the use of generative intelligence
