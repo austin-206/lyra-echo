@@ -2715,7 +2715,7 @@
 <tr>
 <td style="text-align: center;">69</td>
 <td style="text-align: left;"><code>MGMT</code></td>
-<td style="text-align: left;">Switch/AP/firewall management, Vega admin plane</td>
+<td style="text-align: left;">Switch/AP/firewall management, Deb admin plane</td>
 <td style="text-align: left;">172.16.69.0/24</td>
 <td style="text-align: left;">172.16.69.1</td>
 </tr>
@@ -2724,7 +2724,7 @@
 <p><strong>Principles</strong>
 - <strong>Default‑deny</strong> between VLANs. Allow only explicit service flows.<br />
 - The <strong>management plane</strong> (69) should not initiate outbound to user VLANs except for required monitoring/Orch.<br />
-- IoT (20) initiates <strong>outbound only</strong> to Vega services and the orchestrator; no lateral IoT↔User access by default.</p>
+- IoT (20) initiates <strong>outbound only</strong> to Deb services and the orchestrator; no lateral IoT↔User access by default.</p>
 <hr />
 <h2 id="addressing-plan">Addressing Plan<a class="headerlink" href="#addressing-plan" title="Permanent link">&para;</a></h2>
 <p>Use RFC1918 space with deterministic allocations to simplify ACLs and monitoring.</p>
@@ -2739,7 +2739,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Vega (automation hub)</td>
+<td style="text-align: left;">Deb (automation hub)</td>
 <td style="text-align: center;">69</td>
 <td style="text-align: left;">172.16.69.10</td>
 </tr>
@@ -2749,7 +2749,7 @@
 <td style="text-align: left;">172.16.20.10</td>
 </tr>
 <tr>
-<td style="text-align: left;">MQTT broker (on Vega)</td>
+<td style="text-align: left;">MQTT broker (on Deb)</td>
 <td style="text-align: center;">69</td>
 <td style="text-align: left;">172.16.69.20</td>
 </tr>
@@ -2797,9 +2797,9 @@
 <hr />
 <h2 id="service-placement">Service Placement<a class="headerlink" href="#service-placement" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Vega</strong> (Mgmt 69): Mosquitto (MQTT :1883), Node‑RED, Prometheus (9090), Grafana (3000). Bind to Mgmt interface; expose to IoT via firewall rules only.  </li>
+<li><strong>Deb</strong> (Mgmt 69): Mosquitto (MQTT :1883), Node‑RED, Prometheus (9090), Grafana (3000). Bind to Mgmt interface; expose to IoT via firewall rules only.  </li>
 <li><strong>Lyra</strong> (IoT 20 or LAN 10): Orchestration API, Qdrant (6333), LLM engines. Bind to local interface; selectively allow Mgmt scrape/auth as needed.  </li>
-<li><strong>Security Onion</strong> (SecOps 50): inbound syslog from Vega/Lyra; no direct inbound from user VLANs.  </li>
+<li><strong>Security Onion</strong> (SecOps 50): inbound syslog from Deb/Lyra; no direct inbound from user VLANs.  </li>
 <li><strong>Home Assistant</strong> (IoT 20): limited inbound from Mgmt and optionally from LAN for UI access.</li>
 </ul>
 <hr />
@@ -2905,7 +2905,7 @@
 <h2 id="dnsdhcp">DNS/DHCP<a class="headerlink" href="#dnsdhcp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Centralize DHCP per VLAN on the router.  </li>
-<li>DNS: internal zone for key hosts (<code>vega.local</code>, <code>lyra.local</code>, <code>so.local</code>).  </li>
+<li>DNS: internal zone for key hosts (<code>deb.local</code>, <code>lyra.local</code>, <code>so.local</code>).  </li>
 <li>mDNS: <strong>do not</strong> flood across VLANs; reflect only if a service needs discovery (e.g., HA discovery). Prefer static hostnames or unicast DNS instead.</li>
 </ul>
 <hr />
@@ -2931,7 +2931,7 @@ deny in from 172.16.30.0/24 to 172.16.0.0/16
 <h2 id="monitoring-and-logging">Monitoring and Logging<a class="headerlink" href="#monitoring-and-logging" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Prometheus scrapes exporters on Mgmt and selected IoT hosts; restrict scrape targets to allow‑listed IPs.  </li>
-<li>Security Onion ingests syslog from Vega/Lyra; keep content minimal (no PII).  </li>
+<li>Security Onion ingests syslog from Deb/Lyra; keep content minimal (no PII).  </li>
 <li>Node‑RED emits heartbeat topics per VLAN to <code>lyra/health/#</code> for quick sanity checks.</li>
 </ul>
 <hr />

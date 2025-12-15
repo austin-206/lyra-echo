@@ -2605,42 +2605,42 @@
 </tr>
 <tr>
 <td style="text-align: left;">MQTT Broker (Mosquitto)</td>
-<td style="text-align: left;">Vega</td>
+<td style="text-align: left;">Deb</td>
 <td style="text-align: center;">1883</td>
 <td style="text-align: center;">TCP</td>
 <td style="text-align: left;">Inter‑node messaging</td>
 </tr>
 <tr>
 <td style="text-align: left;">Node‑RED Flows</td>
-<td style="text-align: left;">Vega</td>
+<td style="text-align: left;">Deb</td>
 <td style="text-align: center;">1880</td>
 <td style="text-align: center;">HTTP</td>
 <td style="text-align: left;">Orchestration automation</td>
 </tr>
 <tr>
 <td style="text-align: left;">Prometheus</td>
-<td style="text-align: left;">Vega</td>
+<td style="text-align: left;">Deb</td>
 <td style="text-align: center;">9090</td>
 <td style="text-align: center;">HTTP</td>
 <td style="text-align: left;">Metrics collection</td>
 </tr>
 <tr>
 <td style="text-align: left;">Grafana</td>
-<td style="text-align: left;">Vega</td>
+<td style="text-align: left;">Deb</td>
 <td style="text-align: center;">3000</td>
 <td style="text-align: center;">HTTP</td>
 <td style="text-align: left;">Dashboard visualization</td>
 </tr>
 <tr>
 <td style="text-align: left;">Home Assistant</td>
-<td style="text-align: left;">Vega</td>
+<td style="text-align: left;">Deb</td>
 <td style="text-align: center;">8123</td>
 <td style="text-align: center;">HTTP</td>
 <td style="text-align: left;">Automation integration</td>
 </tr>
 <tr>
 <td style="text-align: left;">MkDocs Site</td>
-<td style="text-align: left;">Vega</td>
+<td style="text-align: left;">Deb</td>
 <td style="text-align: center;">8000</td>
 <td style="text-align: center;">HTTP</td>
 <td style="text-align: left;">Internal documentation preview</td>
@@ -2695,28 +2695,28 @@
 <td style="text-align: left;">Vector DB persistent volume</td>
 </tr>
 <tr>
-<td style="text-align: left;">Vega</td>
-<td style="text-align: left;"><code>~/vega-stack/</code></td>
+<td style="text-align: left;">Deb</td>
+<td style="text-align: left;"><code>~/deb-stack/</code></td>
 <td style="text-align: left;">Container compose directory</td>
 </tr>
 <tr>
-<td style="text-align: left;">Vega</td>
-<td style="text-align: left;"><code>~/vega-stack/mosquitto/</code></td>
+<td style="text-align: left;">Deb</td>
+<td style="text-align: left;"><code>~/deb-stack/mosquitto/</code></td>
 <td style="text-align: left;">MQTT config and data</td>
 </tr>
 <tr>
-<td style="text-align: left;">Vega</td>
-<td style="text-align: left;"><code>~/vega-stack/prometheus/</code></td>
+<td style="text-align: left;">Deb</td>
+<td style="text-align: left;"><code>~/deb-stack/prometheus/</code></td>
 <td style="text-align: left;">Prometheus config and targets</td>
 </tr>
 <tr>
-<td style="text-align: left;">Vega</td>
-<td style="text-align: left;"><code>~/vega-stack/grafana/</code></td>
+<td style="text-align: left;">Deb</td>
+<td style="text-align: left;"><code>~/deb-stack/grafana/</code></td>
 <td style="text-align: left;">Grafana data volume</td>
 </tr>
 <tr>
-<td style="text-align: left;">Vega</td>
-<td style="text-align: left;"><code>/opt/vega/.env</code></td>
+<td style="text-align: left;">Deb</td>
+<td style="text-align: left;"><code>/opt/deb/.env</code></td>
 <td style="text-align: left;">Broker and dashboard secrets</td>
 </tr>
 <tr>
@@ -2751,25 +2751,25 @@
 <tr>
 <td style="text-align: left;"><code>lyra/health/#</code></td>
 <td style="text-align: left;">All nodes</td>
-<td style="text-align: left;">Vega (Node‑RED)</td>
+<td style="text-align: left;">Deb (Node‑RED)</td>
 <td style="text-align: left;">Health heartbeats and status</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>lyra/alerts/system</code></td>
-<td style="text-align: left;">Vega (Node‑RED)</td>
+<td style="text-align: left;">Deb (Node‑RED)</td>
 <td style="text-align: left;">Lyra / Dashboard</td>
 <td style="text-align: left;">Operational alerts</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>presence/#</code></td>
 <td style="text-align: left;">Satellite Nodes</td>
-<td style="text-align: left;">Vega / Mirror</td>
+<td style="text-align: left;">Deb / Mirror</td>
 <td style="text-align: left;">Motion and proximity events</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>env/#</code></td>
 <td style="text-align: left;">Mirror / Satellites</td>
-<td style="text-align: left;">Vega / Prometheus</td>
+<td style="text-align: left;">Deb / Prometheus</td>
 <td style="text-align: left;">Environmental sensor data</td>
 </tr>
 <tr>
@@ -2859,7 +2859,7 @@
 <tr>
 <td style="text-align: left;">Node hostnames</td>
 <td style="text-align: left;">lowercase dash‑separated</td>
-<td style="text-align: left;"><code>lyra</code>, <code>vega</code>, <code>mirror‑01</code>, <code>sat‑01</code></td>
+<td style="text-align: left;"><code>lyra</code>, <code>deb</code>, <code>mirror‑01</code>, <code>sat‑01</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">Docker containers</td>
@@ -2879,7 +2879,7 @@
 <tr>
 <td style="text-align: left;">Prometheus jobs</td>
 <td style="text-align: left;">snake_case target host</td>
-<td style="text-align: left;"><code>vega_prometheus</code>, <code>lyra_dcgm</code></td>
+<td style="text-align: left;"><code>deb_prometheus</code>, <code>lyra_dcgm</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">MQTT topics</td>

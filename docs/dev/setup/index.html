@@ -1483,13 +1483,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-steps-vega" class="md-nav__link">
+  <a href="#setup-steps-deb" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Steps (Vega)
+      Setup Steps (Deb)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Setup Steps (Vega)">
+    <nav class="md-nav" aria-label="Setup Steps (Deb)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2581,13 +2581,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-steps-vega" class="md-nav__link">
+  <a href="#setup-steps-deb" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Steps (Vega)
+      Setup Steps (Deb)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Setup Steps (Vega)">
+    <nav class="md-nav" aria-label="Setup Steps (Deb)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2702,7 +2702,7 @@ This is not a traditional code repository setup guide; it defines how the system
 <td style="text-align: left;">Hosts the LLMs, vector database (Qdrant), API service, and GPU workloads.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Vega</strong></td>
+<td style="text-align: left;"><strong>Deb</strong></td>
 <td style="text-align: left;">Integration and Automation Hub</td>
 <td style="text-align: left;">Runs Home Assistant, Node-RED, MQTT broker, and monitoring stack (Prometheus/Grafana).</td>
 </tr>
@@ -2716,7 +2716,7 @@ This is not a traditional code repository setup guide; it defines how the system
 <hr />
 <h2 id="environment-objectives">Environment Objectives<a class="headerlink" href="#environment-objectives" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Provide consistent configuration across Lyra, Vega, and mirror nodes.  </li>
+<li>Provide consistent configuration across Lyra, Deb, and mirror nodes.  </li>
 <li>Maintain isolated Python environments where needed.  </li>
 <li>Preserve security by using <code>.env</code> secrets and local network segmentation.  </li>
 <li>Enable reliable, restart-safe services via containers or systemd units.</li>
@@ -2735,17 +2735,17 @@ This is not a traditional code repository setup guide; it defines how the system
 <tr>
 <td style="text-align: left;">Docker + Compose</td>
 <td style="text-align: left;">Container management for MQTT, Node-RED, Prometheus, Grafana, Home Assistant</td>
-<td style="text-align: left;">Vega, Lyra</td>
+<td style="text-align: left;">Deb, Lyra</td>
 </tr>
 <tr>
 <td style="text-align: left;">Python 3.11+ (<code>venv</code>, <code>pip</code>)</td>
 <td style="text-align: left;">For local utilities or docs preview (optional)</td>
-<td style="text-align: left;">Vega, Lyra</td>
+<td style="text-align: left;">Deb, Lyra</td>
 </tr>
 <tr>
 <td style="text-align: left;">Git</td>
 <td style="text-align: left;">Version control for documentation and config snapshots</td>
-<td style="text-align: left;">Vega</td>
+<td style="text-align: left;">Deb</td>
 </tr>
 <tr>
 <td style="text-align: left;">NVIDIA drivers + DCGM exporter</td>
@@ -2755,7 +2755,7 @@ This is not a traditional code repository setup guide; it defines how the system
 </tbody>
 </table>
 <hr />
-<h2 id="setup-steps-vega">Setup Steps (Vega)<a class="headerlink" href="#setup-steps-vega" title="Permanent link">&para;</a></h2>
+<h2 id="setup-steps-deb">Setup Steps (Deb)<a class="headerlink" href="#setup-steps-deb" title="Permanent link">&para;</a></h2>
 <h3 id="1-system-update-and-base-packages">1) System update and base packages<a class="headerlink" href="#1-system-update-and-base-packages" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>docker.io<span class="w"> </span>docker-compose<span class="w"> </span>git
@@ -2763,8 +2763,8 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">en
 </code></pre></div>
 <h3 id="2-install-container-services-mqtt-nodered-prometheus-grafana-home-assistant">2) Install container services (MQTT, Node‑RED, Prometheus, Grafana, Home Assistant)<a class="headerlink" href="#2-install-container-services-mqtt-nodered-prometheus-grafana-home-assistant" title="Permanent link">&para;</a></h3>
 <p>Create a working directory and a compose file:
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/vega-stack/<span class="o">{</span>mosquitto,data,node-red,prometheus,grafana,homeassistant<span class="o">}</span>
-<span class="nb">cd</span><span class="w"> </span>~/vega-stack
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/deb-stack/<span class="o">{</span>mosquitto,data,node-red,prometheus,grafana,homeassistant<span class="o">}</span>
+<span class="nb">cd</span><span class="w"> </span>~/deb-stack
 nano<span class="w"> </span>docker-compose.yml
 </code></pre></div></p>
 <p>Use this stack (adjust path as needed):
@@ -2870,7 +2870,7 @@ curl<span class="w"> </span>-s<span class="w"> </span>http://localhost:6333/heal
 <div class="highlight"><pre><span></span><code>VECTOR_DB_URL=http://localhost:6333
 ECHO_API_KEY=
 </code></pre></div></p>
-<p><code>/opt/vega/.env</code>
+<p><code>/opt/deb/.env</code>
 <div class="highlight"><pre><span></span><code>MQTT_BROKER_URL=localhost:1883
 GRAFANA_URL=http://localhost:3000
 HOME_ASSISTANT_URL=http://localhost:8123
@@ -2879,7 +2879,7 @@ HOME_ASSISTANT_URL=http://localhost:8123
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Lyra = inference and reasoning layer (GPU host).  </li>
-<li>Vega = automation, monitoring, and integration hub (containerized services).  </li>
+<li>Deb = automation, monitoring, and integration hub (containerized services).  </li>
 <li>Mirror nodes = human-facing interfaces (speech, display, presence).  </li>
 </ul>
 <p>Each layer runs independently but communicates via MQTT and REST APIs on the local network.</p>

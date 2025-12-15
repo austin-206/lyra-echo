@@ -2652,15 +2652,15 @@
 
 <h1 id="mqtt-topics-and-message-schema">MQTT Topics and Message Schema<a class="headerlink" href="#mqtt-topics-and-message-schema" title="Permanent link">&para;</a></h1>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Define the topic hierarchy, message structure, and communication conventions used by Lyra/Echo components via the MQTT broker on Vega.</p>
+<p>Define the topic hierarchy, message structure, and communication conventions used by Lyra/Echo components via the MQTT broker on Deb.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>MQTT serves as the event and telemetry backbone for Lyra Echo, enabling low-latency, bi-directional communication between:</p>
 <ul>
 <li><strong>Mirror Nodes</strong> — Raspberry Pi units publishing presence, sensor, and system data.</li>
 <li><strong>Orchestrator (Lyra)</strong> — central intelligence handling reasoning, context, and tool invocation.</li>
-<li><strong>Home Assistant (Vega)</strong> — automation and environment control subsystem.</li>
+<li><strong>Home Assistant (Deb)</strong> — automation and environment control subsystem.</li>
 </ul>
-<p>All traffic occurs over the internal broker hosted on Vega.
+<p>All traffic occurs over the internal broker hosted on Deb.
 No external MQTT bridges or public brokers are permitted.</p>
 <h2 id="topic-naming-convention">Topic Naming Convention<a class="headerlink" href="#topic-naming-convention" title="Permanent link">&para;</a></h2>
 <p>Topics follow a structured, hierarchical format:</p>
@@ -2754,7 +2754,7 @@ No external MQTT bridges or public brokers are permitted.</p>
 </tr>
 <tr>
 <td style="text-align: left;"><code>ha</code></td>
-<td style="text-align: left;">Vega ↔ Lyra</td>
+<td style="text-align: left;">Deb ↔ Lyra</td>
 <td style="text-align: left;"><code>lyra/ha/light/hall</code></td>
 <td style="text-align: left;">JSON</td>
 <td style="text-align: left;">Home Assistant state relays and automations</td>

@@ -2646,7 +2646,7 @@
 <h2 id="planned-architecture">Planned Architecture<a class="headerlink" href="#planned-architecture" title="Permanent link">&para;</a></h2>
 <div class="mermaid">flowchart TD
     A["Mirror Nodes / MQTT Sensors"]
-    B["Vega Broker"]
+    B["Deb Broker"]
     C["Lyra Orchestrator (Qdrant + LLM)"]
     D["Security Onion VM"]
     E["Lyra Event Ingestor"]
@@ -2659,12 +2659,12 @@
 <p><strong>Data Flow</strong>
 1. Inbound: Lyra receives summarized IDS/NSM events from Security Onion (via syslog or API).<br />
 2. Outbound: Lyra exports system health, agent metrics, and MQTT anomalies to Security Onion for indexing and correlation.<br />
-3. Optional: Vega may relay network device syslogs directly to Security Onion for host-level context.  </p>
+3. Optional: Deb may relay network device syslogs directly to Security Onion for host-level context.  </p>
 <hr />
 <h2 id="implementation-plan">Implementation Plan<a class="headerlink" href="#implementation-plan" title="Permanent link">&para;</a></h2>
 <h3 id="phase-1-passive-integration">Phase 1 — Passive Integration<a class="headerlink" href="#phase-1-passive-integration" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Enable syslog output from Lyra and Vega into Security Onion.  </li>
+<li>Enable syslog output from Lyra and Deb into Security Onion.  </li>
 <li>Forward selected container logs (Ollama, Node-RED, MQTT broker).  </li>
 <li>Create a dedicated log source type (e.g., <code>lyra_logs</code>) within Elastic for structured parsing.  </li>
 </ul>

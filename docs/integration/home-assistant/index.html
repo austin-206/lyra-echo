@@ -2604,10 +2604,10 @@
 
 <h1 id="home-assistant-integration">Home Assistant Integration<a class="headerlink" href="#home-assistant-integration" title="Permanent link">&para;</a></h1>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Describe how Lyra/Echo exchanges data and commands with the Home Assistant (HA) instance running on the Vega server.</p>
+<p>Describe how Lyra/Echo exchanges data and commands with the Home Assistant (HA) instance running on the Deb server.</p>
 <h2 id="system-context">System Context<a class="headerlink" href="#system-context" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Host:</strong> Vega</li>
+<li><strong>Host:</strong> Deb</li>
 <li><strong>Platform:</strong> Home Assistant (Docker, non‑supervised)</li>
 <li><strong>Broker:</strong> Mosquitto (same host, shared Docker network)</li>
 <li><strong>Peers:</strong> Lyra API and edge Pi devices via MQTT</li>
@@ -2622,7 +2622,7 @@
    Explicit actions (e.g., <code>light.turn_on</code>).
    Sent from FastAPI (Lyra) to HA’s REST endpoints.</p>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>Long‑lived HA token stored in <code>.env</code> on Vega:
+<p>Long‑lived HA token stored in <code>.env</code> on Deb:
 Passed as <code>Authorization: Bearer &lt;token&gt;</code> on each REST call.</p>
 <h2 id="rest-endpoints">REST Endpoints<a class="headerlink" href="#rest-endpoints" title="Permanent link">&para;</a></h2>
 <table>

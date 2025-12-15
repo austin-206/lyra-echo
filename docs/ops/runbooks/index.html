@@ -1302,9 +1302,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-restarting-mqtt-broker-on-vega" class="md-nav__link">
+  <a href="#3-restarting-mqtt-broker-on-deb" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Restarting MQTT Broker on Vega
+      3. Restarting MQTT Broker on Deb
     </span>
   </a>
   
@@ -1320,9 +1320,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-emergency-mode-loss-of-vega-or-lyra" class="md-nav__link">
+  <a href="#5-emergency-mode-loss-of-deb-or-lyra" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Emergency Mode (Loss of Vega or Lyra)
+      5. Emergency Mode (Loss of Deb or Lyra)
     </span>
   </a>
   
@@ -2593,9 +2593,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-restarting-mqtt-broker-on-vega" class="md-nav__link">
+  <a href="#3-restarting-mqtt-broker-on-deb" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Restarting MQTT Broker on Vega
+      3. Restarting MQTT Broker on Deb
     </span>
   </a>
   
@@ -2611,9 +2611,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-emergency-mode-loss-of-vega-or-lyra" class="md-nav__link">
+  <a href="#5-emergency-mode-loss-of-deb-or-lyra" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Emergency Mode (Loss of Vega or Lyra)
+      5. Emergency Mode (Loss of Deb or Lyra)
     </span>
   </a>
   
@@ -2758,7 +2758,7 @@ sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w">
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>mkdocs
 sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>mkdocs
 </code></pre></div>
-<h3 id="3-restarting-mqtt-broker-on-vega">3. Restarting MQTT Broker on Vega<a class="headerlink" href="#3-restarting-mqtt-broker-on-vega" title="Permanent link">&para;</a></h3>
+<h3 id="3-restarting-mqtt-broker-on-deb">3. Restarting MQTT Broker on Deb<a class="headerlink" href="#3-restarting-mqtt-broker-on-deb" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>restart<span class="w"> </span>mqtt-broker
 docker<span class="w"> </span>logs<span class="w"> </span>mqtt-broker<span class="w"> </span>--tail<span class="w"> </span><span class="m">50</span>
 </code></pre></div>
@@ -2766,7 +2766,7 @@ docker<span class="w"> </span>logs<span class="w"> </span>mqtt-broker<span class
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nodered
 journalctl<span class="w"> </span>-u<span class="w"> </span>nodered<span class="w"> </span>-f
 </code></pre></div>
-<h3 id="5-emergency-mode-loss-of-vega-or-lyra">5. Emergency Mode (Loss of Vega or Lyra)<a class="headerlink" href="#5-emergency-mode-loss-of-vega-or-lyra" title="Permanent link">&para;</a></h3>
+<h3 id="5-emergency-mode-loss-of-deb-or-lyra">5. Emergency Mode (Loss of Deb or Lyra)<a class="headerlink" href="#5-emergency-mode-loss-of-deb-or-lyra" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Mirror nodes operate in offline mode, answering only with cached responses.</li>
 <li>Log all failures to <code>/var/log/lyra-fallback.log</code>.</li>
@@ -2782,7 +2782,7 @@ journalctl<span class="w"> </span>-u<span class="w"> </span>nodered<span class="
 <hr />
 <h2 id="escalation-path">Escalation Path<a class="headerlink" href="#escalation-path" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Local system recovery (Lyra, Vega)</li>
+<li>Local system recovery (Lyra, Deb)</li>
 <li>Network diagnostics (switch, VLAN isolation)</li>
 <li>Power systems and UPS checks</li>
 <li>Restore from NAS snapshot if persistent failure</li>
@@ -2793,7 +2793,7 @@ journalctl<span class="w"> </span>-u<span class="w"> </span>nodered<span class="
 <p><strong>Trigger:</strong><br />
 A brief power interruption or generator switch causes one or more nodes to reboot or lose connection.</p>
 <p><strong>Impact:</strong><br />
-Vega may lose MQTT broker connectivity; Lyra’s orchestration queue may flush partial states.</p>
+Deb may lose MQTT broker connectivity; Lyra’s orchestration queue may flush partial states.</p>
 <p><strong>Procedure:</strong>
 1. Verify power stability and UPS runtime (<code>upsc lyra-ups@localhost</code>).
 2. Wait 60 seconds for all systems to resume link-state on the network switch.
@@ -2815,7 +2815,7 @@ If MQTT or orchestrator fails to reconnect, proceed to Broker Failure runbook.</
 <p><strong>Trigger:</strong><br />
 Messages no longer propagate between nodes, or mirror nodes show stale states.</p>
 <p><strong>Impact:</strong><br />
-No event communication between Vega, Lyra, and mirror nodes; automation halts.</p>
+No event communication between Deb, Lyra, and mirror nodes; automation halts.</p>
 <p><strong>Procedure:</strong>
 1. Inspect broker logs:
    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>mqtt-broker<span class="w"> </span>--tail<span class="w"> </span><span class="m">50</span>
@@ -2843,13 +2843,13 @@ If the broker continues to fail:
 <hr />
 <h3 id="c-mirror-node-sync-or-rebuild">C. Mirror Node Sync or Rebuild<a class="headerlink" href="#c-mirror-node-sync-or-rebuild" title="Permanent link">&para;</a></h3>
 <p><strong>Trigger:</strong><br />
-A mirror Pi stops responding or shows stale data on Vega’s dashboard.</p>
+A mirror Pi stops responding or shows stale data on Deb’s dashboard.</p>
 <p><strong>Impact:</strong><br />
 No presence or speech input from that node.</p>
 <p><strong>Procedure:</strong>
 1. SSH into the affected node or connect via serial console.
 2. Confirm network reachability:
-   <div class="highlight"><pre><span></span><code>ping<span class="w"> </span>vega.local
+   <div class="highlight"><pre><span></span><code>ping<span class="w"> </span>deb.local
 </code></pre></div>
 3. Restart MQTT client and STT service:
    <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>mqtt-client<span class="w"> </span>stt-service
@@ -2858,8 +2858,8 @@ No presence or speech input from that node.</p>
    <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/lyra/cache/*
 sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>lyra-client
 </code></pre></div>
-5. Sync configuration from Vega:
-   <div class="highlight"><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>vega:/opt/lyra/config/<span class="w"> </span>/opt/lyra/config/
+5. Sync configuration from Deb:
+   <div class="highlight"><pre><span></span><code>rsync<span class="w"> </span>-avz<span class="w"> </span>deb:/opt/lyra/config/<span class="w"> </span>/opt/lyra/config/
 </code></pre></div>
 6. Verify registration message appears in <code>lyra/clients/online</code>.</p>
 <p><strong>Verification:</strong>
@@ -2875,7 +2875,7 @@ If the node fails to reconnect, re-flash from latest SD card image and reassign 
 mosquitto_sub<span class="w"> </span>-t<span class="w"> </span><span class="s1">&#39;lyra/health/#&#39;</span><span class="w"> </span>-v<span class="w"> </span>-C<span class="w"> </span><span class="m">5</span>
 </code></pre></div></p>
 <ul>
-<li>Lyra and Vega both report healthy states.</li>
+<li>Lyra and Deb both report healthy states.</li>
 <li>Mirror nodes show synchronized timestamps and status metrics.</li>
 </ul>
 <hr />
